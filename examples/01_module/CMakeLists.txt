@@ -1,0 +1,4 @@
+add_subdirectory(01_output)
+add_subdirectory(02_variables)
+add_subdirectory(03_input)
+add_subdirectory(04_expressions)
