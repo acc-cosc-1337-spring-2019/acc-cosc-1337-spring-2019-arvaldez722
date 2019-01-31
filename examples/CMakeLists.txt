@@ -1,1 +1,2 @@
 add_subdirectory(01_module)
+add_subdirectory(01_module_test)
