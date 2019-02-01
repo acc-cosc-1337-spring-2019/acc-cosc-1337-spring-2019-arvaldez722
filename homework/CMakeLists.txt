@@ -1,0 +1,2 @@
+add_subdirectory(02_decisions)
+add_subdirectory(02_decisions_test)

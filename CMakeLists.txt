@@ -13,10 +13,12 @@ include_directories(examples/01_module/05_if)
 include_directories(examples/01_module/06_if_else)
 include_directories(examples/01_module/07_switch)
 include_directories(examples/01_module_test)
+include_directories(homework/02_decisions)
 
 add_subdirectory(01-basics)
 add_subdirectory(01-basics_test)
 add_subdirectory(classwork)
 add_subdirectory(examples)
+add_subdirectory(homework)
 
 
