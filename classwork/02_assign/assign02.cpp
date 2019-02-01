@@ -2,7 +2,7 @@
 #include<iostream>
 #include"assign02.h"
 
-diuble grosspay(double hours, double hourly_rate)
+double grosspay(double hours, double hourly_rate)
 {
 	return
 
