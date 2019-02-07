@@ -1,0 +1,7 @@
+add_subdirectory(01_auto)
+add_subdirectory(02_while)
+add_subdirectory(03_for)
+add_subdirectory(04_do_while)
+add_subdirectory(05_for_ranged)
+add_subdirectory(06_value_and_reference_params)
+add_subdirectory(07_vectors_intro)
