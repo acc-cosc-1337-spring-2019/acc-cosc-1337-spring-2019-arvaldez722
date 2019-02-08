@@ -15,3 +15,4 @@ string     char          result
 "larry"     r              2
 "sammy m"   m              3 
 */
+TEST_CASE()

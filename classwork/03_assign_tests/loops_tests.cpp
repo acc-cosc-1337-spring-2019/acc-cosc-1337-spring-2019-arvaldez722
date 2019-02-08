@@ -11,3 +11,7 @@ factorial of 3 returns   6
 factorial of 4 returns  24
 factorial if 5 returns 120
 */
+TEST_CASE("Factorial Function Test thingy")
+{
+	REQUIRE()
+}

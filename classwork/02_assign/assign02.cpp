@@ -6,3 +6,8 @@ double grosspay(double hours, double hourly_rate);
 {
 	return
 }
+
+double grosspay(double hours, double hourly_rate)
+{
+	return 0.0;
+}

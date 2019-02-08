@@ -2,8 +2,8 @@
 
 
 //Write prototype for function that accepts a num and returns a string
-std::string menu_option(int num);
+std::string menu_option(int num)
 {
-	return 0
+	return 0;
 }
 
