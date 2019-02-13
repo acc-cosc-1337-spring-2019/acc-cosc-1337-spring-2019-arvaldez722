@@ -7,5 +7,11 @@ user enters a y or Y.
 */
 int main() 
 {
-	return 0;
+	int menu_choice;
+	char choice;
+	
+	do
+	{
+
+	} while(choice == 'y' || choice == "Y");
 }
