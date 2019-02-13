@@ -5,6 +5,6 @@
 int main() 
 {
 	//call count letters function
-	loop_
+	loop_vector_w_index()
 	return 0;
 }

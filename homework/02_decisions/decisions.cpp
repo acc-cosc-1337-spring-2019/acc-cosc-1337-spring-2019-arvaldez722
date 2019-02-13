@@ -21,4 +21,7 @@
 //a double named credit_points.  The function returns the quotient of credit_points divided by
 //credit_hours. In the function account for division by zero by returning a -1.
 
-
+int calculate_gpa(int credit_hours, double credit_points)
+{
+	return 0;
+}
