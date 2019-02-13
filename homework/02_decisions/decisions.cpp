@@ -9,6 +9,14 @@
 //given grade "D" returns 1
 //given grade "F" returns 0
 //another other value return -1
+int get_grade_points(std::string letter_grade) 
+{
+	if (letter_grade == "A") 
+	{
+		return 4;
+	}
+
+}
 
 
 
