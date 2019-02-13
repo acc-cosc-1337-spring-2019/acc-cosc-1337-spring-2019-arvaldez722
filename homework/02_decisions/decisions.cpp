@@ -15,13 +15,29 @@ int get_grade_points(std::string letter_grade)
 	{
 		return 4;
 	}
+	else if (letter_grade == "B")
+	{
+		return 3;		
+	}
+	else if (letter_grade == "C")
+	{
+		return 2;
+	}
+	else if (letter_grade == "D")
+	{
+		return 1;
 
+	}
+	else if (letter_grade == "F")
+	{
+		return 0;
+
+	}
+	else
+	{
+		return -1;
+	}
 }
-
-
-
-
-
 
 
 
@@ -31,5 +47,12 @@ int get_grade_points(std::string letter_grade)
 
 int calculate_gpa(int credit_hours, double credit_points)
 {
-	return 0;
+	if (credit_hours > 0)
+	{
+		return  credit_points / credit_hours;
+	}
+	else
+	{
+		return -1;
+	}
 }

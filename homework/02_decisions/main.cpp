@@ -1,4 +1,8 @@
 #include<iostream>
+#include<string>
+#include"decisions.h"
+using std::cout; using std::cin; using std::string;
+
 //write include statements
 
 /*
@@ -23,7 +27,37 @@ GPA 3.0
 */
 int main() 
 {
-	std::cout << "Hello" ;
+	string letter_grade;
+	int credit_hours, sum_credit_hours = 0, sum_credit_points = 0;
+
+	cout << "Enter Letter Grade pls: ";
+	cin >> letter_grade;
+	cout << "Enter Credit Points: ";
+	cin >> credit_hours;
+
+	sum_credit_hours += get_grade_points(letter_grade)* credit_hours;
+	sum_credit_hours += credit_hours;
+	//---------------------------------------------------------
+	cout << "Enter Letter Grade pls: ";
+	cin >> letter_grade;
+	cout << "Enter Credit Points: ";
+	cin >> credit_hours;
+
+	sum_credit_hours += get_grade_points(letter_grade)* credit_hours;
+	sum_credit_hours += credit_hours;
+
+	//----------------------------------------------------------------
+	cout << "Enter Letter Grade pls: ";
+	cin >> letter_grade;
+	cout << "Enter Credit Points: ";
+	cin >> credit_hours;
+
+	sum_credit_hours += get_grade_points(letter_grade)* credit_hours;
+	sum_credit_hours += credit_hours;
+	//-------------------------------------------------------
+
+	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
+	cout << "The GPA is: " << gpa;
 
 	return 0;
 }
