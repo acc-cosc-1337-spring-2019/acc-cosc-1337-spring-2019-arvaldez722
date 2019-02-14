@@ -1,3 +1,8 @@
+#include<iostream>
+#include "dna.h"
+#include "dna.cpp"
+ 
+using std::cout; using std::cin;
 /*
 Write code that prompts user to enter 1 for Get GC Content, 
 or 2 for Get DNA Complement.  The program will prompt user for a 
@@ -12,6 +17,12 @@ int main()
 	
 	do
 	{
+		int const std::string& dna
+		cout << "For GC Content: 1";
+		cin >> 
+
+
+
 
 	} while(choice == 'y' || choice == "Y");
 }
