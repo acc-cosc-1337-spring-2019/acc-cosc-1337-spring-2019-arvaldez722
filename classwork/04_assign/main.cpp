@@ -19,8 +19,3 @@ int main()
 	std::vector<std::string> names = { 'John','Mary','Patty','Sam' };
 	return 0;
 }
-void update_vector_element(names)
-{
-
-}
-
