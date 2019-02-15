@@ -8,7 +8,7 @@ void display_vector(const std::vector<std::string>& values)
 {
 	for (auto v : values)
 {
-	stdd::cout << v << "\n";
+	std::cout << v << "\n";
 	}
 }
 
@@ -24,6 +24,6 @@ void update_vector_element(std::vector<std::string>, std::string search_value, s
 {
 	for (auto& v : values)
 	{
-		if (v=)
+		//if (v=)
 	}
 }
