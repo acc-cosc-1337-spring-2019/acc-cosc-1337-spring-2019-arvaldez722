@@ -42,3 +42,15 @@ void loop_vector_w_auto()
 
 	}
 }
+
+void loop_string_w_index()
+{
+}
+
+void loop_string_w_auto()
+{
+}
+
+void loop_const_vector(const std::vector<int>& values)
+{
+}

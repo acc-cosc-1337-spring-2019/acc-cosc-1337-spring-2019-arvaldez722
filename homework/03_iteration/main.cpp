@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include "dna.h"
 #include "dna.cpp"
  
