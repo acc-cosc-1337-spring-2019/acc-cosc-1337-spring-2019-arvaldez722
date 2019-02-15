@@ -11,12 +11,12 @@ factorial.  Also, loop continues as long as user wants to.
 */
 int main() 
 {
-	int user_number_input
+	/*int user_number_input
 		do
 		{
 			cout << "Enter a postive number because frick you:";
 			cin >> user_number_input
 
-		} while (user_number_input > 1);
+		} while (user_number_input > 1);*/
 	
 }
