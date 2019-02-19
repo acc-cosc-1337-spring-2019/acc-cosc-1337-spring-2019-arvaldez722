@@ -25,6 +25,7 @@ include_directories(examples/03_module/07_vectors_intro)
 
 include_directories(homework/02_decisions)
 include_directories(homework/03_iteration)
+include_directories(homework/04_vectors)
 
 add_subdirectory(01-basics)
 add_subdirectory(01-basics_test)

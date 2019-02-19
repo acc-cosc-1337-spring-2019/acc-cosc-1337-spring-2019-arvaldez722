@@ -25,7 +25,7 @@ int main()
 	//Call the gross_pay function and save its return value to the gross_salary variable
 
 	double gross_salary;
-	gross_salary = grosspay(hours, hourly_rate);
+	gross_salary = gross_pay(hours, hourly_rate);
 
 	//Display the gross_salary variable as follows:
 	//Example ---->>>     Gross pay: 150.00   

@@ -36,5 +36,4 @@ std::string get_generation(int year)
 	{
 		return"Wrong year, dummy!";
 	}
-	return std::string();
 }

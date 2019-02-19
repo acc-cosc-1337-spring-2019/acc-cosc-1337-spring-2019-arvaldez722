@@ -14,10 +14,9 @@ int main()
 
 	//prompt user for a keyboard number
 	//assign the number to the value variable
+
 	cout << "Enter a number pls: ";
 	cin >> value;
-
-
 
 	//call the is_even function with value as its argument
 	//and assign its return value to the even variable
