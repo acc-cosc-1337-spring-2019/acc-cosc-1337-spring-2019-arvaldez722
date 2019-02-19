@@ -1,3 +1,9 @@
+#include <vector>
+#include <string>
+#include "sequence.h"
+#include<iostream>
+
+using::cout
 /*
 Write code to create a vector of string names, add the values "John", "Mary", "Patty",
 "Sam" to the vector, call the function display_vector and pass the names vector as
@@ -10,6 +16,6 @@ give you a valid name.
 
 int main()
 {
+	std::vector<std::string> names = { 'John','Mary','Patty','Sam' };
 	return 0;
 }
-

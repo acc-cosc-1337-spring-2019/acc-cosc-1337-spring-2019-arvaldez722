@@ -9,7 +9,7 @@ void loop_string_w_index(std::string str)
 {
 	for (int i = 0 < str.length(); ++i)
 	{
-		std::cout << str[i] << "\n";
+	std::cout << str[i] << "\n";
 	}
 
 }
@@ -43,3 +43,14 @@ void loop_vector_w_auto()
 	}
 }
 
+void loop_string_w_index()
+{
+}
+
+void loop_string_w_auto()
+{
+}
+
+void loop_const_vector(const std::vector<int>& values)
+{
+}
