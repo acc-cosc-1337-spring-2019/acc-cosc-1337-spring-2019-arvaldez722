@@ -20,10 +20,11 @@ replace the vector element with the replace_value.
 */
 
 
-void update_vector_element(std::vector<std::string>, std::string search_value, std::string replace_value)
+void update_vector_element(std::vector<std::string>& values, std::string search_value, std::string replace_value)
 {
 	for (auto& v : values)
 	{
 		//if (v=)
 	}
 }
+
