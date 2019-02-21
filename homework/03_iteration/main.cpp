@@ -14,16 +14,32 @@ user enters a y or Y.
 int main() 
 {
 	int menu_choice;
-	char choice;
+	char c;
+	std::string dna;
 	
 	do
 	{
-		int const std::string& dna
-		cout << "For GC Content: 1";
-		cin >> 
+		cout << "For GC Content: 1 \n For DNA Complement: 2";
+		cin >> menu_choice;
+		count << "Enter DNA String: \n";
+		cin >> dna;
 
+		if (menu_choice == 1)
+		{
+			cout << "GC Content is " << get_gc_content(dna) << "\n";
 
+		}
+		else
+		{
+			cout << "DNA Complement is " << get_dna_complement << "\n";
+
+		}
+
+		cout << "Do you want to continue? Enter: y";
+		cin >> c;
 
 
 	} while(choice == 'y' || choice == "Y");
+
+	return 0;
 }

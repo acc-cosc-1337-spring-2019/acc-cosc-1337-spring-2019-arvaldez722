@@ -17,7 +17,7 @@ double get_gc_content(const std::string& dna)
 			count++;
 		}
 	}
-	return count / dna.size;
+	return count / dna.length();
 }
 
 
@@ -26,10 +26,15 @@ Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
 
-std::string get_reverse_string(std::string dna)
+std::string get_reverse_string(std::string str)
 {
+	std::string reverse;
 
-	return std::string();
+	for (std::size_t i = str.size() - 1; i != -1; --i)
+	{
+		reverse.push_back(str[i]);
+	}
+	return reverse;
 }
 
 std::string get_dna_complement(std::string dna)
@@ -52,12 +57,28 @@ c. return string
 
 std::string get_dna_complement(std::string dna)
 {
-	std::string reverse = get_reverse_string(dna);
 
-	for (auto& d : reverse)
+	for (std::size_t i = 0; i < dna.size(); ++1)
 	{
+		switch (dna[i])
+		{
+		case 'A':
+			dna[i] = 'T';
+			break;
+		case 'T':
+			dna[i] = 'A';
+			break;
+		case 'C':
+			dna[i] = 'G';
+			break;
+		case 'G':
+			dna[i] = 'C';
+			break;
+		default:
+			break;
+		}
 
 	}
-	return reverse;
+	return reverse_string(dna);
 }
 

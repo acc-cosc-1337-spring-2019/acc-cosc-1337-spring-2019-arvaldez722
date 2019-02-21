@@ -16,7 +16,7 @@ void loop_string_w_index(std::string str)
 
 void loop_string_w_auto(std::string str)
 {
-	for (auto c = str)
+	for (auto c : str)
 	{
 		std::cout << c << "\n";
 
@@ -43,14 +43,28 @@ void loop_vector_w_auto()
 	}
 }
 
-void loop_string_w_index()
+void loop_vector_w_index(std::vector<int> values) //pass by value
 {
+	values[0] = 1000;
+	for (int i = 0; i < values.size(); ++i) //++i is like i=i+1
+	{
+		std::cout << values[i] << "\n";
+	}
 }
 
-void loop_string_w_auto()
+void loop_vector(std::vector<int>& values)//pass by ref
 {
+	value[0] = 1000;
+	for (int i = 0; i < values.size(); ++i)
+	{
+		std::cout << values[i] << "\n";
+	}
 }
 
 void loop_const_vector(const std::vector<int>& values)
 {
+	for (auto v : values)
+	{
+		std::cout << v << "\n";
+	}
 }
