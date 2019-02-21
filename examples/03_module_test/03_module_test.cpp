@@ -18,41 +18,46 @@ string     char          result
 "sammy m"   m              3 
 */
 
-
-TEST_CASE("Test pass by value and reference")
+/*
+Create test case to validate pass by value and reference
+*/
+TEST_CASE("Test pass by value and reference") 
 {
 	int num1 = 1;
 	int num2 = 2;
 	int num3 = 3;
 	pass_by_val_and_ref(num1, num2, num3);
-
 	REQUIRE(num1 == 1);
 	REQUIRE(num2 == 50);
 
 }
-TEST_CASE("Test pass vector by value")
+
+TEST_CASE("Test pass vector by value") 
 {
+	
 	std::vector<int> num = { 44, 55, 77, 11, 99 };
 	std::vector<int> nums = { 44, 55, 77, 11, 99 };
 	loop_vector_w_index(nums);
-
-	for (int i = 0; i < num.size(); ++i);
+	
+	for (int i = 0; i < num.size(); ++i) 
 	{
 		REQUIRE(num[i] == nums[i]);
 	}
+
+
 }
+
 TEST_CASE("Test pass vector by reference")
 {
-	//how to pass same function name argument by ref?
-	std::vector<int> nums = { 44, 55, 77, 11, 99 };
+	//TODO how to pass same function name argument by reference?
+	std::vector<int> num = { 1000, 55, 77, 11, 99 };
 	std::vector<int> nums = { 44, 55, 77, 11, 99 };
 	loop_vector(nums);
 
 	for (int i = 0; i < num.size(); ++i)
 	{
 		REQUIRE(num[i] == nums[i]);
-
 	}
-	
+
 
 }

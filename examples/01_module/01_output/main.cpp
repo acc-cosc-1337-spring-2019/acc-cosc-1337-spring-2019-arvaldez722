@@ -1,5 +1,6 @@
 #include "output.h"
 
+
 int main() 
 {
 	output_data();

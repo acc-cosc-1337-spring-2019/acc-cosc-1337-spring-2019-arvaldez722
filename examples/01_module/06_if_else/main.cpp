@@ -1,7 +1,8 @@
 #include "if_else.h"
 #include<iostream>
 
-using std::cout; using std::cin;
+using std::cout;
+using std::cin;
 
 int main() 
 {
@@ -11,7 +12,6 @@ int main()
 	cin >> year;
 
 	cout << get_generation(year);
-
 	
 	return 0;
 }

@@ -1,9 +1,7 @@
-#include<iostream>
-
+#include<string>
 
 //Write prototype for function that accepts a num and returns a string
-std::string menu_option(int num)
-{
-	return 0;
-}
+std::string menu_option(int num);
+
+
 
