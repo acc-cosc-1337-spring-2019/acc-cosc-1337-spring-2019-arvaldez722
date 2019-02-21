@@ -45,7 +45,7 @@ int get_grade_points(std::string letter_grade)
 //a double named credit_points.  The function returns the quotient of credit_points divided by
 //credit_hours. In the function account for division by zero by returning a -1.
 
-int calculate_gpa(int credit_hours, double credit_points)
+double calculate_gpa(int credit_hours, double credit_points)
 {
 	if (credit_hours > 0)
 	{

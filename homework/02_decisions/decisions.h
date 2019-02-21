@@ -10,4 +10,4 @@ int get_grade_points(std::string letter_grade);
 //Write a function prototype with name calculate_gpa that accepts an int named credit_hours and
 //an double named credit_points.  
 
-int calculate_gpa(int credit_hours, double credit_points);
+double calculate_gpa(int credit_hours, double credit_points);
