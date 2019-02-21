@@ -13,7 +13,7 @@ vector values 15,12,11,99,88 returns 99
 vector values 150,120,11,990,88888 returns 88888
 */
 TEST_CASE("get_max_from_vector TEST CASE") {
-	REQUIRE()
+	//REQUIRE()
 }
 
 /*
