@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
 #include "dna.h"
-#include "dna.cpp"
  
 using std::cout; using std::cin;
 /*
@@ -21,7 +20,7 @@ int main()
 	{
 		cout << "For GC Content: 1 \n For DNA Complement: 2";
 		cin >> menu_choice;
-		count << "Enter DNA String: \n";
+		cout << "Enter DNA String: \n";
 		cin >> dna;
 
 		if (menu_choice == 1)
@@ -31,7 +30,7 @@ int main()
 		}
 		else
 		{
-			cout << "DNA Complement is " << get_dna_complement << "\n";
+			cout << "DNA Complement is " << get_dna_complement(dna) << "\n";
 
 		}
 
@@ -39,7 +38,7 @@ int main()
 		cin >> c;
 
 
-	} while(choice == 'y' || choice == "Y");
+	} while(menu_choice == 'y' || menu_choice == 'Y');
 
 	return 0;
 }
