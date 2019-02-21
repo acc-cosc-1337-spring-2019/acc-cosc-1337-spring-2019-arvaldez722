@@ -14,7 +14,5 @@ factorial if 5 returns 120
 */
 TEST_CASE("Factorial Function Test thingy")
 {
-	REQUIRE(factorial_function(3) == 6);
-	REQUIRE(factorial_function(4) == 24);
-	REQUIRE(factorial_function(5) == 120);
+	REQUIRE()
 }

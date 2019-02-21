@@ -13,11 +13,7 @@ vector values 15,12,11,99,88 returns 99
 vector values 150,120,11,990,88888 returns 88888
 */
 TEST_CASE("get_max_from_vector TEST CASE") {
-	std::vector<int> v1 = {3,8,1,99,1000}
-	std::vector<int> v2 = {15,12,11,99,88}
-	std::vector<int> v3 = {150,120,11,990,88888}
-
-		REQUIRE()
+	REQUIRE()
 }
 
 /*
