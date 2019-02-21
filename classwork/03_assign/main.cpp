@@ -9,14 +9,20 @@ Use a do while loop to prompt the user for
 a number, call the factorial function, and display the number's
 factorial.  Also, loop continues as long as user wants to.
 */
-int main() 
+int main()
 {
-	/*int user_number_input
-		do
-		{
-			cout << "Enter a postive number because frick you:";
-			cin >> user_number_input
+	char choice;
+	int num;
 
-		} while (user_number_input > 1);*/
-	
+	do
+	{
+		cout << "Please Enter Number: ";
+		cin >> num
+		cout << "The Factorial is: " << factorial_function(num) << "\n";
+
+		cout << "Press y to Continue: ";
+		cin >> choice;
+
+	} while (choice == 'y' || choice == 'Y');
+	return 0;
 }

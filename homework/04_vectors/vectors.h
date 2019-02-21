@@ -22,8 +22,9 @@ thatgiven a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
-bool is_prime(int num)
+bool is_prime(int)
 {
+	int i;
 	if (num % 2 == 0) {
 		return "False";
 	}
@@ -41,6 +42,15 @@ the number
 @return vector of ints containing prime values up to a value
 */
 
-vector<int> vector_of_primes(int number) {
-	return 
+vector<int> vector_of_primes(int number) 
+{
+	for (int i = 1; i < number; ++i)
+	{
+		if (is_prime(i))
+		{
+			primes.push_back(i)
+		}
+	}
+	return primes;
+
 }

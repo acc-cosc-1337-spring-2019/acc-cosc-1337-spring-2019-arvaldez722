@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-
+#include "vectors.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -13,7 +13,11 @@ vector values 15,12,11,99,88 returns 99
 vector values 150,120,11,990,88888 returns 88888
 */
 TEST_CASE("get_max_from_vector TEST CASE") {
-	REQUIRE()
+	std::vector<int> v1 = {3,8,1,99,1000}
+	std::vector<int> v2 = {15,12,11,99,88}
+	std::vector<int> v3 = {150,120,11,990,88888}
+
+		REQUIRE()
 }
 
 /*
@@ -23,6 +27,12 @@ Write a test case for is_prime with values:
 43 returns true
 44 returns false
 */
+TEST_CASE("Is Prime Test Case")
+{
+	REQUIRE(is_prime(2) = true);
+	REQUIRE(is_prime(4) = false);
+	REQUIRE(is_prime(43) = true);
+	REQUIRE(is_prime(44) = false);
 
 
 /*
@@ -32,3 +42,8 @@ argument 10 return vector should have the following items:
 argument 50 return vector should have the following items:
 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
 */
+
+TEST_CASE("Vector of primes test case")
+{
+
+}

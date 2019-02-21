@@ -16,28 +16,14 @@ void loop_string_w_index();
 
 void loop_string_w_auto();
 
-void loop_vector(std::vector<int> values);
-
-void loop_vector_w_index(std::vector<int>& values)
-{
-	values[0] = 1000
-		for (int i = 0 < values.size(); ++i)
-		{
-			std::cout << value[i] << "\n"
-
-		}
-}
-
-
-void loop_vector_w_index();
-
-void loop_vector_w_auto();
-
 void loop_vector_w_index(std::vector<int> values);
 
 void loop_vector(std::vector<int>& values);
 
 void loop_const_vector(const std::vector<int>& values);
+
+
+
 
 
 //c++ 98 style
@@ -60,12 +46,3 @@ void loop_string_w_auto(std::string str);
 	}
 }
 */
-void loop_string_w_index();
-
-void loop_string_w_auto();
-
-void loop_vector(std::vector<int> values);
-
-void loop_vector_w_index(std::)
-
-void loop_const_vector(const std::vector<int>& values);
