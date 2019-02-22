@@ -20,5 +20,5 @@ int factorial_function(int num)
 	{
 		factorial = factorial * i;
 	}
-	return factorual;
+	return factorial;
 }
