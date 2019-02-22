@@ -1,5 +1,8 @@
 #include "rectangle.h"
 #include<iostream>
+#include<vector>
+
+using std::cout; using std::cin;
 /*
 Create a vector of rectangles
 Add 3 Rectangle classes to the vector:
@@ -16,3 +19,9 @@ int main()
 	//std::cout << return_val();
 	return 0;
 }
+
+Regtangle std::vector reg_1 = { 4, 5, 20 };
+
+Regtangle std::vector reg_2 = { 10, 10, 100 };
+
+Regtangle std::vector reg_3 = { 100, 10, 1000 };

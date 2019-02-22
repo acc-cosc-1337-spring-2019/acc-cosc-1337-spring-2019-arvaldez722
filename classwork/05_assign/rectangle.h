@@ -7,9 +7,11 @@ class Regtangle
 {
 public:
 	Regtangle(int wid, int heig);
-	int get_area_regtangle();
+	int get_area_regtangle() const;
 
 private:
+	void calculate_area();
+
 	int area;
 	int width;
 	int height;

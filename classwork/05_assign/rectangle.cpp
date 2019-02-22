@@ -8,4 +8,12 @@ Regtangle::Regtangle(int wid, int heig) :
 	width(wid), height(heih)
 {
 }
-int Regtangle::get_area_regtangle()
+int Regtangle::get_area_regtangle() const
+{
+	return area;
+}
+void calculate_area()
+{
+	calculate_area = width * height;
+
+}
