@@ -28,6 +28,7 @@ include_directories(examples/04_module/01_bank)
 include_directories(homework/02_decisions)
 include_directories(homework/03_iteration)
 include_directories(homework/04_vectors)
+include_directories(homework/tic_tac_toe)
 
 add_subdirectory(01-basics)
 add_subdirectory(01-basics_test)
