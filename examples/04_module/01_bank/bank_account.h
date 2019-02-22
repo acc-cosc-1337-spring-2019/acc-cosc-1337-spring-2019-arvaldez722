@@ -8,5 +8,5 @@ public:
 private:
 	int account_number;
 	double balance;
-
+	bool 
 };
