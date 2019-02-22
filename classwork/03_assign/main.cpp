@@ -17,7 +17,7 @@ int main()
 	do
 	{
 		cout << "Please Enter Number: ";
-		cin >> num
+		cin >> num;
 		cout << "The Factorial is: " << factorial_function(num) << "\n";
 
 		cout << "Press y to Continue: ";

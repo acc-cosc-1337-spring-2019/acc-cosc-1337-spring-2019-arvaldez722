@@ -1,0 +1,2 @@
+add_executable(05_assign_tests "rectangle_tests.cpp")
+target_link_libraries(05_assign_tests 05_assign_library)

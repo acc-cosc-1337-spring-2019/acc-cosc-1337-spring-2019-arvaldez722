@@ -8,10 +8,11 @@ const reference vector of ints parameter that returns an int
 @return the max value in the vector
 */
 
-int get_max_from_vector(const std::vector<int>)
-{
+/*
+int get_max_from_vector(const std::vector<int>);
+
 	return vector;
-}
+}*/
 
 
 /*
@@ -22,7 +23,8 @@ thatgiven a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
-bool is_prime(int)
+/*
+bool is_prime(int);
 {
 	int i;
 	if (num % 2 == 0) {
@@ -31,7 +33,7 @@ bool is_prime(int)
 	else {
 		return "It's Prime";
 	}
-}
+}*/
 
 /*
 Write a a function prototype named vector_of_primes with an integer 
@@ -41,7 +43,7 @@ the number
 @param int integer value
 @return vector of ints containing prime values up to a value
 */
-
+/*
 vector<int> vector_of_primes(int number) 
 {
 	for (int i = 1; i < number; ++i)
@@ -53,4 +55,4 @@ vector<int> vector_of_primes(int number)
 	}
 	return primes;
 
-}
+}*/

@@ -1,18 +1,20 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-#include "loops.h"
+#include "rectangle.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
 /*
-Write a test case for function factorial with values:
-factorial of 3 returns   6
-factorial of 4 returns  24
-factorial if 5 returns 120
+Create a test case to test the Rectangle class with following values:
+Width	Height		Area
+  4		 5			  20
+ 10		10			 100
+100		10			1000
+
 */
-TEST_CASE("Factorial Function Test thingy")
+TEST_CASE("TESTING") 
 {
-	//REQUIRE()
+	REQUIRE(return_val() == 1);
 }
