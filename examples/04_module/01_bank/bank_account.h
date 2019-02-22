@@ -2,6 +2,7 @@ class BankAccount
 {
 public:
 	BankAccount(int act, double bal);//constructor
+	double get_balance(); 
 
 
 private:
