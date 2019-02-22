@@ -9,3 +9,13 @@ double BankAccount::get_balance() const
 {
 	return balance;
 }
+
+void BankAccount::deposit(double amount)
+{
+	if (amount > 0)
+	{
+		balance += amount;
+	}
+}
+
+void BankAccount::withdraw
