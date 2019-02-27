@@ -2,7 +2,7 @@
 
 bool TicTacToe::game_over()
 {
-	if (check_column_win() || check_row_win() || check)
+	if (check_column_win())
 	{
 		return true;
 	}
@@ -14,20 +14,22 @@ void TicTacToe::start_game(std::string first_player)
 	next_player = first_player;
 }
 
+void TicTacToe::mark_board(int position) // model what would happen if selected position 1
+{                                        // think about vector index[0]
+	pegs[position - 1] = next_player;
+	set_next_player();
+}
+
 std::string TicTacToe::get_player() const
 {
 	return next_player;
 }
 
-void TicTacToe::mark_board(int position) // model what would happen if selected position 1
-{                                        // think about vector index[0]
-	pegs[position - 1] = next_player;
-}
-
-std::string TicTacToe::get_player const()
+std::string TicTacToe::display_board const()
 {
 	return std::string();
 }
+
 
 void TicTacToe::set_next_player()
 {
@@ -53,3 +55,24 @@ bool TicTacToe::check_column_win()   //win by column if 0,3,6 // 2,5,8
 		
 	return false;
 }
+
+//how to determine if a player has won?
+bool TicTacToe::check_row_win()
+{
+	return false;
+}
+
+//how
+bool TicTacToe::check_diagonal_win()
+{
+	return false;
+}
+
+void TicTacToe::clear_board()
+{
+	for (pegs[i] : {8,' ')
+	{
+
+	}
+}
+
