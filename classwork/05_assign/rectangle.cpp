@@ -12,7 +12,7 @@ int Regtangle::get_area_regtangle() const
 {
 	return area;
 }
-void calculate_area()
+void Regtangle::calculate_area()
 {
 	calculate_area = width * height;
 

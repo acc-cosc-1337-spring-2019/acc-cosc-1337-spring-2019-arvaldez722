@@ -4,9 +4,8 @@
 
 int main() 
 {
-	TicTacToe display;
-	
-	std::cout << (std::string display_board())
+	TicTacToe game;
 
+	
 	return 0;
 }

@@ -70,9 +70,9 @@ bool TicTacToe::check_diagonal_win()
 
 void TicTacToe::clear_board()
 {
-	for (pegs[i] : {8,' ')
+	if (game_over() == true)
 	{
-
+		(pegs[i] == pegs)
 	}
 }
 
