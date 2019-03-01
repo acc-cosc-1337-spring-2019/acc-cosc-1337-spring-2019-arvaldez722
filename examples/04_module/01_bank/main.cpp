@@ -1,9 +1,14 @@
 #include "atm.h"
+#include <iostream>
 
 int main() 
 {
-	ATM atm;
-	atmdisplay_balance();
+	
+	BankAccount account(123456, 500);
+	Customer customer(account);
+	ATM atm(customer);
+	atm.display_balance();
+	std::cout << copy.get_balance();
 	/*
 	BankAccount account(12345689, 500);
 	BankAccount account1(55545689, 5000);
