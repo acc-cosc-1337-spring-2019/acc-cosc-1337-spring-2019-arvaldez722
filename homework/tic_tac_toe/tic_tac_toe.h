@@ -28,5 +28,8 @@ private:
 	std::vector<std::string> pegs{ 9," " };
 
 	void set_next_player();
+
+	bool check_board_full();
+
 	
 };

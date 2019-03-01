@@ -2,7 +2,7 @@
 
 bool TicTacToe::game_over()
 {
-	if (check_column_win())
+	if (check_column_win() || check_row_win() || check_diagonal_win())
 	{
 		return true;
 	}
@@ -47,7 +47,8 @@ bool TicTacToe::check_column_win()   //win by column if 0,3,6 // 2,5,8
 {                                        // 1,4,7
 	for (std::size_t i = 0; i < 3; ++i)
 	{
-		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && pegs[i + 6] != " ")
+		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && 
+			pegs[i + 6] != " ")
 		{
 			return true;
 		}
@@ -59,20 +60,36 @@ bool TicTacToe::check_column_win()   //win by column if 0,3,6 // 2,5,8
 //how to determine if a player has won?
 bool TicTacToe::check_row_win()
 {
+	for (std::size_t i = 0; i < 9; i += 3)
+	{
+		if (pegs[i] == pegs[i + 1] && pegs[i +1] == pegs[i+2] &&
+			pegs[i+2] != " ")
+	}
 	return false;
 }
 
 //how
 bool TicTacToe::check_diagonal_win()
 {
-	return false;
-}
+	if (pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[8] != " ")
+	{
+		return true;
+	}
+	else if (pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[6] != " ")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 
 void TicTacToe::clear_board()
 {
-	if (game_over() == true)
+	for (auto& p : pegs)
 	{
-		(pegs[i] == pegs)
+		p = " ";
+	}
 	}
 }
 

@@ -18,4 +18,4 @@ void BankAccount::deposit(double amount)
 	}
 }
 
-void BankAccount::withdraw
+void BankAccount::withdraw(double amount)
