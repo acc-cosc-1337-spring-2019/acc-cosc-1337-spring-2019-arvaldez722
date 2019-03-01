@@ -43,6 +43,7 @@ void TicTacToe::set_next_player()
 
 }
 
+
 bool TicTacToe::check_column_win()   //win by column if 0,3,6 // 2,5,8
 {                                        // 1,4,7
 	for (std::size_t i = 0; i < 3; ++i)
@@ -90,6 +91,19 @@ void TicTacToe::clear_board()
 	{
 		p = " ";
 	}
-	}
 }
 
+bool TicTacToe::check_board_full()
+{
+	for (auto p : pegs)
+	{
+		if (p == " ")
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+}
