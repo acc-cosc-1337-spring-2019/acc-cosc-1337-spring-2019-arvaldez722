@@ -31,5 +31,7 @@ private:
 
 	bool check_board_full();
 
+	bool no_winner();
+
 	
 };

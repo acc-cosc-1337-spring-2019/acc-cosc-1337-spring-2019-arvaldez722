@@ -107,3 +107,16 @@ bool TicTacToe::check_board_full()
 		}
 	}
 }
+bool TicTacToe::no_winner()
+{
+	if (pegs[1] = pegs[5] && pegs[5] == pegs[7] && pegs[7] != " ")
+	{
+		return true;
+	}
+	else if (pegs[2] = pegs[3] && pegs[3] == pegs[9] && pegs[9] != " ")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
