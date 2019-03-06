@@ -14,6 +14,9 @@ public:
 
 	std::string display_board const();
 
+	//-----------------------------
+	std::string winner;
+
 private:
 	std::string next_player;
 
@@ -32,6 +35,13 @@ private:
 	bool check_board_full();
 
 	bool no_winner();
+
+	//---------------------------------
+
+	std::string get_winner();
+
+	void set_winner();
+
 
 	
 };

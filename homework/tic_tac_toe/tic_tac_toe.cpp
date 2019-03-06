@@ -18,6 +18,11 @@ void TicTacToe::mark_board(int position) // model what would happen if selected 
 {                                        // think about vector index[0]
 	pegs[position - 1] = next_player;
 	set_next_player();
+	if (game_over == false)
+	{
+		set_next_player;
+	}
+
 }
 
 std::string TicTacToe::get_player() const
