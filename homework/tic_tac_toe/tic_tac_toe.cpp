@@ -1,28 +1,10 @@
 #include "tic_tac_toe.h"
-
-bool TicTacToe::game_over()
-{
-	if (check_column_win() || check_row_win() || check_diagonal_win())
-	{
-		return true;
-	}
-	return false;
-}
+#include<iostream>
 
 void TicTacToe::start_game(std::string first_player)
 {
 	next_player = first_player;
-}
-
-void TicTacToe::mark_board(int position) // model what would happen if selected position 1
-{                                        // think about vector index[0]
-	pegs[position - 1] = next_player;
-	set_next_player();
-	if (game_over == false)
-	{
-		set_next_player;
-	}
-
+	clear_board();
 }
 
 std::string TicTacToe::get_player() const
@@ -30,65 +12,99 @@ std::string TicTacToe::get_player() const
 	return next_player;
 }
 
-std::string TicTacToe::display_board const()
+bool TicTacToe::game_over()
 {
-	return std::string();
+	if(check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
+	{
+		return true;
+	}
+
+	return false;
 }
 
+void TicTacToe::mark_board(int position)
+{
+	pegs[position - 1] = next_player;
+
+	if (!game_over())
+	{
+		set_next_player();
+	}
+}
 
 void TicTacToe::set_next_player()
 {
-	if (next_player == 'X' || 'x')
+	if (next_player == "X") 
 	{
-		set_next_player == 'O' || 'o';
+		next_player = "O";
 	}
-	else
-		set_next_player == 'X' || 'x';
-
-
+	else 
+	{
+		next_player = "X";
+	}
 }
 
-
-bool TicTacToe::check_column_win()   //win by column if 0,3,6 // 2,5,8
-{                                        // 1,4,7
-	for (std::size_t i = 0; i < 3; ++i)
+/*
+Win by column if and return true if
+0,3, and 6 are equal
+1, 4, and 7
+2, 5, and 8
+else
+false
+*/
+bool TicTacToe::check_column_win()
+{
+	for (std::size_t i = 0; i < 3; ++i) 
 	{
-		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && 
-			pegs[i + 6] != " ")
+		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] &&
+			pegs[i + 6] != " ") 
 		{
 			return true;
 		}
 	}
-		
 	return false;
 }
-
-//how to determine if a player has won?
+/*
+Win by row if 
+0, 1, 2 are equal
+3,4,5 are equal
+6,7,8 are equal
+*/
 bool TicTacToe::check_row_win()
 {
 	for (std::size_t i = 0; i < 9; i += 3)
 	{
-		if (pegs[i] == pegs[i + 1] && pegs[i +1] == pegs[i+2] &&
-			pegs[i+2] != " ")
+		if (pegs[i] == pegs[i + 1] && pegs[i + 1] == pegs[i + 2] &&
+			pegs[i + 2] != " ")
+		{
+			return true;
+		}
 	}
 	return false;
 }
 
-//how
-bool TicTacToe::check_diagonal_win()
+/*
+Win diagonally
+0 1 2
+3 4 5
+6 7 8
+
+*/
+bool TicTacToe::check_diagonal_win() 
 {
 	if (pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[8] != " ")
 	{
 		return true;
 	}
-	else if (pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[6] != " ")
+	else if (pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[6] != " ") 
 	{
 		return true;
 	}
-	else
+	else 
 	{
 		return false;
 	}
+}
 
 void TicTacToe::clear_board()
 {
@@ -100,28 +116,33 @@ void TicTacToe::clear_board()
 
 bool TicTacToe::check_board_full()
 {
-	for (auto p : pegs)
+	for (auto p : pegs) 
 	{
-		if (p == " ")
+		if (p == " ") 
 		{
 			return false;
 		}
-		else
-		{
-			return true;
-		}
+	}
+
+	return true;
+}
+
+void TicTacToe::display_board() const 
+{
+	for (std::size_t i = 0; i < 9; i += 3)
+	{
+		std::cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n";
 	}
 }
-bool TicTacToe::no_winner()
+
+void TicTacToe::set_winner() 
 {
-	if (pegs[1] = pegs[5] && pegs[5] == pegs[7] && pegs[7] != " ")
+	if (check_board_full()) 
 	{
-		return true;
+		winner = "C";
 	}
-	else if (pegs[2] = pegs[3] && pegs[3] == pegs[9] && pegs[9] != " ")
+	else 
 	{
-		return true;
+		winner = next_player;
 	}
-	else
-	{
-		return false;
+}
