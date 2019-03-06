@@ -5,7 +5,7 @@ has one public function area that returns the area of the rectangle, and one pri
 that calculates area of the rectangle.  The class has 3 int private variables area, width, and height.
 */
 Regtangle::Regtangle(int wid, int heig) :
-	width(wid), height(heih)
+	width(wid), height(heig)
 {
 }
 int Regtangle::get_area_regtangle() const
@@ -14,6 +14,6 @@ int Regtangle::get_area_regtangle() const
 }
 void Regtangle::calculate_area()
 {
-	calculate_area = width * height;
+	area = width * height;
 
 }

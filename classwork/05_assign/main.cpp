@@ -16,12 +16,7 @@ Iterate the vector and display the Area for each Rectangle on one line and the t
 */
 int main() 
 {
-	//std::cout << return_val();
+
 	return 0;
 }
 
-Regtangle std::vector reg_1 = { 4, 5, 20 };
-
-Regtangle std::vector reg_2 = { 10, 10, 100 };
-
-Regtangle std::vector reg_3 = { 100, 10, 1000 };

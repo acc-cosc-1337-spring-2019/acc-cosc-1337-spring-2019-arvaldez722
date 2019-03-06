@@ -1,8 +1,9 @@
 #include "customer.h"
+
 #ifndef ATM_H
 #define ATM_H
 
-class ATM
+class ATM 
 {
 public:
 	ATM(Customer c) : customer(c) {}
@@ -10,6 +11,6 @@ public:
 
 private:
 	Customer customer;
-
 };
+
 #endif // !ATM_H
