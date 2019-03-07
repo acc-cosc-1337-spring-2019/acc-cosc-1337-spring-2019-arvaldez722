@@ -1,3 +1,5 @@
+#ifndef "TIC_TAC_TOE_H"
+#define "TIC_TAC_TOE_H"
 #include<string>
 #include<vector>
 
@@ -9,7 +11,7 @@ public:
 	bool game_over();
 	void mark_board(int position);
 	void display_board() const;
-	std::string get_winner()const { return winner; }
+	std::string get_winner()const;
 private:
 	std::string next_player;
 	std::vector<std::string> pegs{ 9, " " };
@@ -23,3 +25,5 @@ private:
 	bool check_board_full();
 	void set_winner();
 };
+
+#endif //!TIC_TAC_TOE_H

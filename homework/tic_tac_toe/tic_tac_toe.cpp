@@ -135,14 +135,19 @@ void TicTacToe::display_board() const
 	}
 }
 
+std::string TicTacToe::get_winner() const
+{
+	return std::string winner;
+}
+
 void TicTacToe::set_winner() 
 {
-	if (check_board_full()) 
+	if (check_board_full(std::string winner) == "C") 
 	{
-		winner = "C";
+		set_winner = "C";
 	}
 	else 
 	{
-		winner = next_player;
+		swt_winner = next_player;
 	}
 }

@@ -1,5 +1,7 @@
 #ifndef TIC_TAC_TOE_MANAGER_H
 #define TIC_TAC_TOE_MANAGER_H
+#include<vector>
+#include<string>
 
 class TicTacToeManager
 {
@@ -8,6 +10,7 @@ public:
 	void save_game(const TicTacToe b); //add games to vector with .push_back
 
 private:
+
 	std::vector<TicTacToe> games;
 	void display_history() const;
 
