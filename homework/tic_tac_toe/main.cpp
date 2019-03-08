@@ -10,10 +10,11 @@ int main()
 	char choice;
 	int position;
 	TicTacToeManager manager;
-
+	
 	do 
 	{
 		TicTacToe tic_tac_toe;
+
 		cout << "First player: ";
 		cin >> first;
 		tic_tac_toe.start_game(first);
@@ -29,7 +30,7 @@ int main()
 
 		manager.save_game(tic_tac_toe);
 
-		cout << "play again";
+		cout << "Wanna try again?";
 		cin >> choice;
 
 	} while (choice == 'y');
