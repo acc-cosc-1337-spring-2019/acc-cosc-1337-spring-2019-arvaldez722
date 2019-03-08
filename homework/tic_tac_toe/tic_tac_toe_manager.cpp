@@ -2,6 +2,7 @@
 #include "tic_tac_toe.h"
 #include<vector>
 #include<string>
+
 //Write class function implementations here
 
 void TicTacToeManager::display_history()
@@ -12,14 +13,18 @@ void TicTacToeManager::display_history()
 
 void TicTacToeManager::save_game(const TicTacToe b)
 {
-	games.push_back(TicTacToe);
+	games.push_back(game);
 
-	update_winner_count(TicTacToe::winner == "X" || "O" || "C")
+	update_winner_count(game.get_winnter());
 }
 
 void TicTacToeManager::display_history() const
 {
-	for(std::vector<TicTacToe> games: iterator = 0; )
+	for (for auto game : games)
+	{
+		game.display_board();
+
+	}
 }
 
 void TicTacToeManager::update_winner_count(std::string winner)
@@ -32,6 +37,6 @@ void TicTacToeManager::update_winner_count(std::string winner)
 	{
 		++o_win;
 	}
-	else
+	else if (winner = "C")
 		++ties;
 }
