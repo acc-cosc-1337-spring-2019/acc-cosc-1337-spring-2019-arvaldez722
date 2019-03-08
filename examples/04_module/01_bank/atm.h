@@ -5,12 +5,14 @@
 
 class ATM 
 {
-public:
-	ATM(Customer c) : customer(c) {}
+public:					//initalize
+	ATM(Customer& c) : customer(c) {}
 	void display_balance();
+	void diposit(double amt);
+	void withdraw(double amt);
 
 private:
-	Customer customer;
+	Customer& customer;
 };
 
 #endif // !ATM_H

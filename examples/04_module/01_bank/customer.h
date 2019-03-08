@@ -4,11 +4,13 @@
 
 class Customer 
 {
-public:
-	Customer(BankAccount act) : account(act) {}
-	double get_balance() const { return account.get_balance(); }
+public:			//make BA a ref use for midterm
+	Customer(BankAccount& act) : account(act) {} //this is an initalizer list 
+	
+	BankAccount& get_account();
+
 private:
-	BankAccount account;
+	BankAccount& account;
 
 };
 

@@ -1,5 +1,5 @@
-#ifndef "TIC_TAC_TOE_H"
-#define "TIC_TAC_TOE_H"
+#ifndef TICTACTOE_H
+#define TICTACTOE_H
 #include<string>
 #include<vector>
 
@@ -26,4 +26,4 @@ private:
 	void set_winner();
 };
 
-#endif //!TIC_TAC_TOE_H
+#endif //!TICTACTOE_H
