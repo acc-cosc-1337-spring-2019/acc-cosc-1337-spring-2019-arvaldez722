@@ -271,5 +271,6 @@ TEST_CASE("Test No Winner")
 		board.mark_board(7);//X 
 		//X wins 
 		REQUIRE(board.game_over() == true);
+		REQUIRE(board.get_winner() == "C")
 	}
 }

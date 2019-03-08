@@ -8,7 +8,7 @@ class TicTacToeManager
 {
 public:
 	void display_history() const;
-	void save_game(const TicTacToe b); //add games to vector with .push_back
+	void save_game(const TicTacToe game); //add games to vector with .push_back
 	
 private:
 
