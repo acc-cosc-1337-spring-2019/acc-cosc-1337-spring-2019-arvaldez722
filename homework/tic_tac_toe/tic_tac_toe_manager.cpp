@@ -5,22 +5,16 @@
 
 //Write class function implementations here
 
-void TicTacToeManager::display_history()
-{
-
-
-}
-
-void TicTacToeManager::save_game(const TicTacToe b)
+void TicTacToeManager::save_game(const TicTacToe game)
 {
 	games.push_back(game);
 
-	update_winner_count(game.get_winnter());
+	update_winner_count(game.get_winner());
 }
 
 void TicTacToeManager::display_history() const
 {
-	for (for auto game : games)
+	for (auto game : games)
 	{
 		game.display_board();
 
@@ -37,6 +31,6 @@ void TicTacToeManager::update_winner_count(std::string winner)
 	{
 		++o_win;
 	}
-	else if (winner = "C")
+	else if (winner == "C")
 		++ties;
 }

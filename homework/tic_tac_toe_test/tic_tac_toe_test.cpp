@@ -8,10 +8,10 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Test game over")
 {
-	TicTacToe;
+	TicTacToe board;
 	board.game_over();
 
-	REQUIRE(board.game_over(false));
+	REQUIRE(board.game_over() == false);
 
 }
 
@@ -249,7 +249,7 @@ TEST_CASE("Test No Winner")
 	REQUIRE(board.game_over() == false);
 	board.mark_board(7);//x
 
-	REQUIRE(board.get_winner() == "C")
+	REQUIRE(board.get_winner() == "C");
 
 }
 	
