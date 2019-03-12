@@ -20,7 +20,7 @@ void TicTacToeManager::save_game(const TicTacToe b)
 
 void TicTacToeManager::display_history() const
 {
-	for (for auto game : games)
+	for (auto game : games)
 	{
 		game.display_board();
 
