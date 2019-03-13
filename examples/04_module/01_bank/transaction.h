@@ -10,8 +10,9 @@ enum Types
 };
 class Transaction
 {
-
-	Transaction(std::string& type, double amt, double bal) : type(t), amount(amt), balance(bal) {}//constructor
+public:
+	Transaction(const std::string t, double amt, double bal) : 
+		type(t), amount(amt), balance(bal) {} //constructor
 
 	friend std::ostream & operator << (std::ostream & out,
 		const Transaction &t);

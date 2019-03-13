@@ -18,6 +18,8 @@ public:
 	friend std::ostream & operator << (std::ostream & out, 
 		                               const BankAccount & b);
 
+	std::vector<Transaction> get_transactions()const;
+
 private:
 
 	std::vector<Transaction> transactions;

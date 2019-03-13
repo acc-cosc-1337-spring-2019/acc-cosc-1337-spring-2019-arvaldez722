@@ -11,6 +11,9 @@ public:					//initalize
 	void diposit(double amt);
 	void withdraw(double amt);
 
+	void display_transactions()const;
+
+
 private:
 	Customer& customer;
 };

@@ -7,7 +7,9 @@ BankAccount::BankAccount(int act, double bal) :
 }
 double BankAccount::get_balance() const
 {
-	transactions.push_back(Transaction ("Inquiry", 0, balance));
+	Transaction("Inquiry", 0, balance);
+	transactions.push_back(t));
+
 	return balance;
 }
 
@@ -16,7 +18,14 @@ void BankAccount::deposit(double amount)
 	if (amount > amount_greater_zero(amount))
 	{
 		balance += amount;
+
+
 	}
+
+
+	Transaction("Deposit", 0, balance);
+	transactions.push_back(t));
+
 }
 
 void BankAccount::deposit(int pin, double amount) 
@@ -30,6 +39,9 @@ void BankAccount::withdraw(double amount)
 	{
 		balance -= amount;
 	}
+
+	Transaction("Withdraw", 0, balance);
+	transactions.push_back(t));
 }
 
 bool BankAccount::amount_greater_zero(double amount)
@@ -57,4 +69,9 @@ std::ostream & operator<<(std::ostream & out, const BankAccount & b)
 	out << "Balance: " << b.balance;
 	
 	return out;
+}
+
+std::vector<Transaction> get_transactions()const
+{
+	return transactions;
 }
