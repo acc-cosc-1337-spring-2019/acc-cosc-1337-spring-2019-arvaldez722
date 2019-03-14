@@ -20,7 +20,7 @@ void ATM::withdraw(double amt)
 
 void ATM::display_transactions() const
 {
-	cout << "     Type:    " << "     Amount     " << "    Balance     ";
+	out << "     Type:    " << "     Amount     " << "    Balance     ";
 
 	for (auto tran : customer.get_account().get_transactions()) //get_account().get_transactions --> a vector
 	{

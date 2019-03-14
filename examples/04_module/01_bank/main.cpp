@@ -1,8 +1,39 @@
 #include "atm.h"
 #include<iostream>
+#include"savings_account.h"
+#include"checking_account.h"
+#include"bank_account.h"
+#include <vector>
+
 
 int main()
 {
+	SavingsAccount s(12345, 1000);
+	std::cout << s.get_balance() <<"\n"
+
+	BankAccount& b = s; //bankaccount ref to savingsaccont
+	std::cout << b.get_balance;
+	
+	CheckingAccount c(54321, 500);
+	std::cout << c.get_balance() << "\n";
+
+	BankAccount& d = c;
+	std::cout << c.get_balance() << "\n";
+
+	std::vector<std::reference_wrapper<BankAccount>> accounts{ s,c };
+
+	for (auto & account : accounts)
+	{ //account must be unwrapped with .get() to get the instance of Account
+
+			std::cout << account.get().get_balance() << std::endl;
+
+	}
+
+
+	/*int num = 5;
+	int& num_ref = num;
+	std::cout << num_ref; //saves memory address of num to num_ref
+
 	BankAccount account(123456, 500); //now since we called bankaccount a ref it doesn't create a copy
 	Customer customer(account);
 	ATM atm(customer);

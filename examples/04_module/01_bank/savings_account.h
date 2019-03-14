@@ -7,9 +7,11 @@ class SavingsAccount : public BankAccount //<--- inherit from bankaccount
 {
 public:											//initializer list below
 	SavingsAccount(int act,double bal, float i = .9) :
-		BankAccount(act, bal), interest_rate(i) {}
+		BankAccount(act, bal), interest_rate(i) {	}
 
 	void add_interest_earned();
+
+	double get_balance(); 
 
 private:
 	const float interest_rate;

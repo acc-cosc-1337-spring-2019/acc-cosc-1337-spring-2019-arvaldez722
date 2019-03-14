@@ -5,8 +5,10 @@ BankAccount::BankAccount(int act, double bal) :
 	account_number(act), balance(bal)
 {
 }
-double BankAccount::get_balance() const
+
+double BankAccount::get_balance() 
 {
+	
 	Transaction("Inquiry", 0, balance);
 	transactions.push_back(t));
 
@@ -71,7 +73,7 @@ std::ostream & operator<<(std::ostream & out, const BankAccount & b)
 	return out;
 }
 
-std::vector<Transaction> get_transactions()const
+std::vector<Transaction> get_transactions() const
 {
 	return transactions;
 }
