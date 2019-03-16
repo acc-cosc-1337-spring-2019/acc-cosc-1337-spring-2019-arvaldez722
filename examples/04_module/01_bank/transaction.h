@@ -14,7 +14,8 @@ public:
 	Transaction(const std::string t, double amt, double bal) : 
 		type(t), amount(amt), balance(bal) {} //constructor
 
-	friend std::ostream & operator << (std::ostream & out,
+	friend std::ostream & 
+		<< (std::ostream & out,
 		const Transaction &t);
 
 
