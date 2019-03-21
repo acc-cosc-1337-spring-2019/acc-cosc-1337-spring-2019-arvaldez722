@@ -15,7 +15,8 @@ public:
 	std::string get_winner()const;
 
 
-	friend std::istream &operator>>(std::istream &in,  TicTacToe &t)
+	friend std::istream &
+		>>(std::istream &in,  TicTacToe &t)
 	{
 		int position;
 		std::cout << "Enter position";
