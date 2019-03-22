@@ -8,7 +8,7 @@ int main()
 {
 	std::string first;
 	char choice;
-	//--> int position;
+	int position;
 	TicTacToeManager manager;
 	
 	do 
@@ -21,7 +21,12 @@ int main()
 
 		while (tic_tac_toe.game_over() == false) 
 		{
-			std::cin >> tic_tac_toe;
+			std::cout << "Enter psoition for " << tic_tac_toe.get_player();
+			std::cin >> position;
+			tic_tac_toe.mark_board(position);
+			tic_tac_toe.display_board();
+
+			std::cout << "\n\n";
 		}
 
 		manager.save_game(tic_tac_toe);
