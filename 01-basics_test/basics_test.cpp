@@ -18,3 +18,10 @@ TEST_CASE("Test multiply_numbers", "[2,5,10]") {
 	REQUIRE(multiply_numbers(5, 5) == 25);
 	REQUIRE(multiply_numbers(10, 10) == 100);
 }
+
+TEST_CASE("Test Multiple numbers homework", "[8, 15, 100]")
+{
+	REQUIRE(multiply_numbers(2, 4) == 8);
+	REQUIRE(multiply_numbers(3, 5) == 15);
+	REQUIRE(multiply_numbers(10, 10) == 100);
+}
