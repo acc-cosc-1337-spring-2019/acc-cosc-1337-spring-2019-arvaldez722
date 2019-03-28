@@ -24,6 +24,7 @@ include_directories(examples/03_module/05_for_ranged)
 include_directories(examples/03_module/06_value_and_reference_params)
 include_directories(examples/03_module/07_vectors_intro)
 include_directories(examples/04_module/01_bank)
+include_directories(examples/07_module)
 
 include_directories(homework/02_decisions)
 include_directories(homework/03_iteration)
