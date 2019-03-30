@@ -29,15 +29,24 @@ given a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
-bool is_prime(int)
+bool is_prime(int num)
 {
-	int i = 0;
-	if (i % 2 == 0)
+	bool is_prime = true;
+	for (int i = 2; i < num; i++)
 	{
-		return "False";
+		if (num % i == 0)
+		{
+			is_prime = false;
+			break;
+		}
 	}
-	else {
-		return "Prime";
+	if (is_prime == true && num > 1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
 /*
