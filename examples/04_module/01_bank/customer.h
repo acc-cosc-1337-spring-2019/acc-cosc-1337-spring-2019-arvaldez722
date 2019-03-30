@@ -4,11 +4,9 @@
 
 class Customer 
 {
-public:			//make BA a ref use for midterm
-	Customer(BankAccount& act) : account(act) {} //this is an initalizer list 
-	
+public:
+	Customer(BankAccount& act) : account(act) {}
 	BankAccount& get_account();
-
 private:
 	BankAccount& account;
 

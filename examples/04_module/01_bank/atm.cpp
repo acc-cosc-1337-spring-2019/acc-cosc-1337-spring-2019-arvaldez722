@@ -1,16 +1,16 @@
 #include "atm.h"
 #include<iostream>
 
+using std::cout;
 
 void ATM::display_balance()
 {
-	std::cout << "Balance: " << customer.get_account().get_balance();
+	cout << "Balance: " << customer.get_account().get_balance();
 }
 
-void ATM::diposit(double amt)
+void ATM::deposit(double amt)
 {
-	BankAccount& act = customer.get_account();
-	act.deposit(amt);
+	customer.get_account().deposit(amt);
 }
 
 void ATM::withdraw(double amt)
@@ -20,11 +20,10 @@ void ATM::withdraw(double amt)
 
 void ATM::display_transactions() const
 {
-	out << "     Type:    " << "     Amount     " << "    Balance     ";
+	cout << "Type   " << "Amount  " << " Balance  ";
 
-	for (auto tran : customer.get_account().get_transactions()) //get_account().get_transactions --> a vector
+	for (auto tran : customer.get_account().get_transactions()) 
 	{
 		std::cout << tran;
 	}
-
 }

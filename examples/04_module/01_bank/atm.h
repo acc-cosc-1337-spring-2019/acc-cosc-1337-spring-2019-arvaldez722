@@ -5,15 +5,12 @@
 
 class ATM 
 {
-public:					//initalize
+public:
 	ATM(Customer& c) : customer(c) {}
 	void display_balance();
-	void diposit(double amt);
+	void deposit(double amt);
 	void withdraw(double amt);
-
 	void display_transactions()const;
-
-
 private:
 	Customer& customer;
 };

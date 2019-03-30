@@ -11,7 +11,7 @@ int main()
 	//can't create instance of Shape because it is an abstract class (bc it has a pure virtual funtion)
 
 	Shape* line = new Line(); //creates dynamic memeory (on heap)
-	line->draw;
+	line->draw();
 	delete line;
 
 	std::vector<Shape*> shapes{ new Line(), new Circle() }; //created a vector of shape pointers
