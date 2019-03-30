@@ -16,5 +16,5 @@ Width	Height		Area
 */
 TEST_CASE("TESTING") 
 {
-	REQUIRE(return_val() == 1);
+//	REQUIRE(return_val() == 1);
 }
