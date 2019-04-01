@@ -1,7 +1,8 @@
 #ifndef TICTACTOE_H
 #define TICTACTOE_H
-#include<string>
-#include<vector>
+
+#include <string>
+#include <vector>
 #include <iostream>
 
 class TicTacToe 
@@ -14,22 +15,8 @@ public:
 	void display_board() const;
 	std::string get_winner()const;
 
-
-	friend std::istream &
-		>>(std::istream &in,  TicTacToe &t)
-	{
-		int position;
-		std::cout << "Enter position";
-
-		in >> position;
-		t.mark_board(position);
-
-		return in;
-	
-	}
-
-
-
+	friend std::istream& operator>> (std::istream &in, TicTacToe &t);
+	friend std::ostream& operator<< (std::ostream &out, const TicTacToe &t);
 private:
 	std::string next_player;
 	std::vector<std::string> pegs{ 9, " " };

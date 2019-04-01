@@ -1,22 +1,21 @@
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
+
 #include<string>
 
 enum Types
 {
-	inquiry,
+	inquiry,  
 	deposit,
 	withdraw
 };
+
 class Transaction
 {
 public:
-	Transaction(const std::string t, double amt, double bal) : 
-		type(t), amount(amt), balance(bal) {} //constructor
+	Transaction(const std::string t, double amt, double bal) : Types(t), amount(amt), balance(bal) {} //constructor
 
-	friend std::ostream & 
-		<< (std::ostream & out,
-		const Transaction &t);
+	friend std::ostream & << (std::ostream & out, const Transaction &t);
 
 
 

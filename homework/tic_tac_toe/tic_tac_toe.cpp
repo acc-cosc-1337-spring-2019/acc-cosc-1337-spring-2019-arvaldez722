@@ -152,3 +152,23 @@ void TicTacToe::set_winner()
 		winner = next_player;
 	}
 }
+
+std::istream& operator>> (std::istream &in, TicTacToe &t)
+{
+	int position;
+	std::cout << "Enter position: ";
+
+	in >> position;
+	t.mark_board(position);
+
+	return in;
+
+}
+
+std::ostream& operator<< (std::ostream &out, const TicTacToe &t)
+{
+	for (std::size_t i = 0; i < 9; i += 3)
+	{
+		out << t.pegs[i] << "|" << t.pegs[i + 1] << "|" << t.pegs[i + 2] << "\n";
+	}
+}

@@ -1,7 +1,9 @@
 #ifndef BANK_ACCOUNT_H
 #define BANK_ACCOUNT_H
-#include<iostream>
-#include<vector>
+
+#include <iostream>
+#include <vector>
+
 #include "transaction.h"
 
 class BankAccount
