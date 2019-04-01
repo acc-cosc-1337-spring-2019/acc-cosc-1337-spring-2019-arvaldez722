@@ -10,11 +10,11 @@ vector of intsparameter that returns the max value in a vector
 int get_max_from_vector(const std::vector<int>& vector_of_integers)
 {
 	int max = 0;
-	for (int i = 0; i > vector_of_integers.size(); ++i)
+	for (auto num: vector_of_integers)
 	{
-		if (vector_of_integers[i] > max)
+		if (num > max)
 		{
-			max = vector_of_integers[i];
+			max = num;
 		}
 
 	}
@@ -29,15 +29,24 @@ given a number returns true if prime or false if not prime
 @return: bool if prime False if not
 */
 
-bool is_prime(int)
+bool is_prime(int num)
 {
-	int i = 0;
-	if (i % 2 == 0)
+	bool is_prime = true;
+	for (int i = 2; i < num; i++)
 	{
-		return "False";
+		if (num % i == 0)
+		{
+			is_prime = false;
+			break;
+		}
 	}
-	else {
-		return "Prime";
+	if (is_prime == true && num > 1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
 /*

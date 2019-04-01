@@ -12,7 +12,7 @@ int main()
 	char choice;
 	int position;
 	TicTacToeManager manager;
-	
+
 	do 
 	{
 		TicTacToe tic_tac_toe;
@@ -23,22 +23,21 @@ int main()
 
 		while (tic_tac_toe.game_over() == false) 
 		{
-			std::cout << "Enter psoition for " << tic_tac_toe.get_player();
-			std::cin >> position;
-			tic_tac_toe.mark_board(position);
-			tic_tac_toe.display_board();
-
-			std::cout << "\n\n";
+			cin >> tic_tac_toe;
+			cout << tic_tac_toe;
+			cout << "\n\n";
 		}
+
+		cout<<"Winner: " << tic_tac_toe.get_winner();
 
 		manager.save_game(tic_tac_toe);
 
-		cout << "Wanna try again?";
+		cout << "play again";
 		cin >> choice;
 
 	} while (choice == 'y');
 
-	manager.display_history();
+	cout<<manager;
 
 	return 0;
 }

@@ -35,7 +35,7 @@ TEST_CASE("Test first player X")
 TEST_CASE("Test win first column", "[x wins first column")
 {
 	TicTacToe board;
-	board.start_game("x");
+	board.start_game("X");
 
 	REQUIRE(board.game_over() == false);
 	board.mark_board(1);//x
@@ -224,32 +224,26 @@ TEST_CASE("Test No Winner")
 {
 	TicTacToe board;
 	board.start_game("X");
-
 	REQUIRE(board.game_over() == false);
-	board.mark_board(2);//x
-
+	board.mark_board(1);//X         
 	REQUIRE(board.game_over() == false);
-	board.mark_board(1);//o
-
+	board.mark_board(2);//O          
 	REQUIRE(board.game_over() == false);
-	board.mark_board(6);//x
-
+	board.mark_board(3);//X          
 	REQUIRE(board.game_over() == false);
-	board.mark_board(9);//o
-
+	board.mark_board(5);//O          
 	REQUIRE(board.game_over() == false);
-	board.mark_board(7);//x
-
+	board.mark_board(4);//X 
 	REQUIRE(board.game_over() == false);
-	board.mark_board(6);//x
-
+	board.mark_board(6);//O          
 	REQUIRE(board.game_over() == false);
-	board.mark_board(9);//o
-
+	board.mark_board(8);//X 
 	REQUIRE(board.game_over() == false);
-	board.mark_board(7);//x
-
+	board.mark_board(7);//O          
+	REQUIRE(board.game_over() == false);
+	board.mark_board(9);//X
+	//X wins 
+	REQUIRE(board.game_over() == true);
 	REQUIRE(board.get_winner() == "C");
-
 }
 	
