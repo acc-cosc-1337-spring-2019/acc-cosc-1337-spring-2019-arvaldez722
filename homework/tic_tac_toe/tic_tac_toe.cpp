@@ -1,6 +1,8 @@
 #include "tic_tac_toe.h"
 #include<iostream>
 
+
+
 void TicTacToe::start_game(std::string first_player)
 {
 	next_player = first_player;
@@ -158,7 +160,7 @@ std::ostream & operator<<(std::ostream & out, const TicTacToe & t)
 std::istream & operator>>(std::istream & in, TicTacToe & t)
 {
 	int position;
-	std::cout << "Enter position[1-9]: ";
+	std::cout << "Enter position: ";
 	in >> position;
 	t.mark_board(position);
 
