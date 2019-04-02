@@ -9,9 +9,9 @@ class Panel : public wxPanel
 {
 public:
 	Panel(wxWindow* parent);
-	
+
 private:
+	void on_hello(wxCommandEvent& event); //signature for class function 
 
 };
-
 #endif // !PANEL_H
