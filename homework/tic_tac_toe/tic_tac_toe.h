@@ -5,6 +5,7 @@
 class TicTacToe 
 {
 public:
+	TicTacToe(int size) : pegs(size*size) {};
 	void start_game(std::string first_player);
 	std::string get_player() const;
 	bool game_over();
@@ -16,7 +17,7 @@ public:
 		TicTacToe & t);
 private:
 	std::string next_player;
-	std::vector<std::string> pegs{ 9, " " };
+	std::vector<std::string> pegs;
 	std::string winner;
 
 	void set_next_player();
