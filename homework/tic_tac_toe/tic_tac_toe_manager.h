@@ -1,7 +1,8 @@
 #ifndef TIC_TAC_TOE_MANAGER_H
 #define TIC_TAC_TOE_MANAGER_H
+
 #include "tic_tac_toe.h"
-#include<vector>
+#include <vector>
 //Write class interface here
 
 class TicTacToeManager 

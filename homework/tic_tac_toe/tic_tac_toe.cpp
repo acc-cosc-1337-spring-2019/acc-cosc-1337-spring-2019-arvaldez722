@@ -1,5 +1,6 @@
 #include "tic_tac_toe.h"
 #include<iostream>
+#include <cmath>
 
 void TicTacToe::start_game(std::string first_player)
 {
@@ -55,14 +56,6 @@ false
 */
 bool TicTacToe::check_column_win()
 {
-	for (std::size_t i = 0; i < 3; ++i) 
-	{
-		if (pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] &&
-			pegs[i + 6] != " ") 
-		{
-			return true;
-		}
-	}
 	return false;
 }
 /*
@@ -73,14 +66,7 @@ Win by row if
 */
 bool TicTacToe::check_row_win()
 {
-	for (std::size_t i = 0; i < 9; i += 3)
-	{
-		if (pegs[i] == pegs[i + 1] && pegs[i + 1] == pegs[i + 2] &&
-			pegs[i + 2] != " ")
-		{
-			return true;
-		}
-	}
+
 	return false;
 }
 
@@ -93,18 +79,7 @@ Win diagonally
 */
 bool TicTacToe::check_diagonal_win() 
 {
-	if (pegs[0] == pegs[4] && pegs[4] == pegs[8] && pegs[8] != " ")
-	{
-		return true;
-	}
-	else if (pegs[2] == pegs[4] && pegs[4] == pegs[6] && pegs[6] != " ") 
-	{
-		return true;
-	}
-	else 
-	{
-		return false;
-	}
+	return false;
 }
 
 void TicTacToe::clear_board()
@@ -147,9 +122,23 @@ void TicTacToe::set_winner()
 
 std::ostream & operator<<(std::ostream & out, const TicTacToe & t)
 {
-	for (std::size_t i = 0; i < 9; i += 3)
+	//nested loop
+	int length = std::sqrt(t.pegs.size());
+
+	//for each row
+	for (std::size_t i = 0; i < length; ++i)
 	{
-		std::cout << t.pegs[i] << "|" << t.pegs[i + 1] << "|" << t.pegs[i + 2] << "\n";
+		//for each column
+		for (std::size_t j = 0; j < length; ++j)
+		{
+			std::cout << t.pegs[i*length+j];
+			if (length - 1 != j) {
+				std::cout << "|";
+			}
+		}
+
+		//at the end of each line
+		std::cout << std::endl;
 	}
 
 	return out;
@@ -157,9 +146,24 @@ std::ostream & operator<<(std::ostream & out, const TicTacToe & t)
 
 std::istream & operator>>(std::istream & in, TicTacToe & t)
 {
-	int position;
-	std::cout << "Enter position[1-9]: ";
-	in >> position;
+	int position = 0;
+
+	while (position < 1 || position > t.pegs.size()) {
+		std::cout << "Enter position[1-" << t.pegs.size() << "]: ";
+
+		in >> position;
+
+		if (position < 1 || position > t.pegs.size()) {
+			std::cout << "This move is out of range!" << std::endl;
+		}
+		else {
+			if (" " != t.pegs[position - 1]) {
+				std::cout << "This position is already taken!" << std::endl;
+				position = 0;
+			}
+		}
+	}
+
 	t.mark_board(position);
 
 	return in;
