@@ -2,7 +2,7 @@
 #include "panel.h"
 
 Frame::Frame() 
-	: wxFrame(NULL, wxID_ANY, "Hello World!", wxDefaultPosition, wxSize(400, 300))
+	: wxFrame(NULL, wxID_ANY, "Banking App", wxDefaultPosition, wxSize(400, 300))
 {
 	auto panel = new Panel(this);
 }

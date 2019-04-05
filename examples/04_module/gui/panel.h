@@ -1,8 +1,8 @@
 #ifndef PANEL_H
 #define PANEL_H
 #include<wx/wx.h>
-#include "checking_account.h"
 
+#include "checking_account.h"
 
 class Panel : public wxPanel
 {
