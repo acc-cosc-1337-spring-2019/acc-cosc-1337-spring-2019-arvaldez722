@@ -181,7 +181,7 @@ TEST_CASE("Test win by 3rd ROW  3x3")
 	tic_tac_toe->mark_board(7);//o
 
 	REQUIRE(board->game_over() == false);
-	board->mark_board(6);//x
+	tic_tac_toe->mark_board(6);//x
 
 	REQUIRE(tic_tac_toe->game_over() == false);
 	tic_tac_toe->mark_board(8);//o
