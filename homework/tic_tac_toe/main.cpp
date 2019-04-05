@@ -15,8 +15,8 @@ int main()
 	std::string first = "C";
 	char choice = 'N';
 	int size = 0;
-	TicTacToeManager manager;
-	TicTacToe* tic_tac_toe = NULL;
+	std::unique_ptr<TicTacToeManager> manager = std::make_unique<TicTacToeManager>();
+	std::unique_ptr<TicTacToe> tic_tac_toe; 
 
 	do 
 	{
@@ -28,13 +28,7 @@ int main()
 				<< "Selection (1,2): ";
 			cin >> size;
 		}
-		//if size is 1 selection is 3x3 else 4x4
-		if (1 == size) {
-			tic_tac_toe = new TicTacToe3();
-		} else {
-			tic_tac_toe = new TicTacToe4();
-		}
-
+		tic_tac_toe = manager->get_game(size);
 		//Check to see if the first player wants to be X or O
 		while (first != "X" && first != "O") {
 			cout << "First player (X or O?): ";
@@ -56,17 +50,15 @@ int main()
 
 		cout<<"Winner: " << tic_tac_toe->get_winner() << endl;
 
-		manager.save_game(*tic_tac_toe);
+		manager->save_game(std::move(tic_tac_toe));
 
 		cout << "play again";
 		cin >> choice;
 
 	} while (choice == 'y' || choice == 'Y');
 
-	cout << manager << endl;
+	cout << *manager;
 
-	//Free up the pointer
-	delete tic_tac_toe;
-
+	
 	return 0;
 }
