@@ -12,7 +12,7 @@ double get_gc_content(const std::string& dna)
 
 	for (auto d : dna)
 	{
-		if (d == 'G' || d == 'C')
+		if (d == 'G' || d == 'g' || d == 'c' || d == 'C')
 		{
 			count++;
 		}
@@ -51,21 +51,24 @@ c. return string
 
 std::string get_dna_complement(std::string dna)
 {
-
 	for (std::size_t i = 0; i < dna.size(); ++i)
 	{
 		switch (dna[i])
 		{
 		case 'A':
+		case 'a':
 			dna[i] = 'T';
 			break;
 		case 'T':
+		case 't':
 			dna[i] = 'A';
 			break;
 		case 'C':
+		case 'c':
 			dna[i] = 'G';
 			break;
 		case 'G':
+		case 'g':
 			dna[i] = 'C';
 			break;
 		default:
@@ -73,6 +76,7 @@ std::string get_dna_complement(std::string dna)
 		}
 
 	}
+
 	return get_reverse_string(dna);
 }
 

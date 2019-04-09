@@ -1,6 +1,6 @@
 #ifndef PANEL_H
 #define PANEL_H
-#include<wx/wx.h>
+#include <wx/wx.h>
 #include "grid_sizer_provider.h"
 #include "tic_tac_toe_manager.h"
 

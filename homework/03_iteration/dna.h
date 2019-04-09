@@ -1,4 +1,4 @@
-#include<string>
+#include <string>
 /*
 Write prototype for function get_gc_content that accepts
 a const reference string parameter and returns a double

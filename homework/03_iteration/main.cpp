@@ -18,10 +18,12 @@ int main()
 	
 	do
 	{
-		cout << "For GC Content: 1 \n For DNA Complement: 2";
+		cout << "1.)GC Content\n2.)For DNA Complement\nEnter choice: ";
 		cin >> menu_choice;
 		cout << "Enter DNA String: \n";
 		cin >> dna;
+
+		//Add code to make dna string all upper case?
 
 		if (menu_choice == 1)
 		{
@@ -34,11 +36,11 @@ int main()
 
 		}
 
-		cout << "Do you want to continue? Enter: y";
+		cout << "Do you want to continue? (y/n) ";
 		cin >> c;
 
 
-	} while(menu_choice == 'y' || menu_choice == 'Y');
+	} while(c == 'y' || c == 'Y');
 
 	return 0;
 }

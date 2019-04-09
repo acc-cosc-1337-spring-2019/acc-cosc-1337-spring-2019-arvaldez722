@@ -38,7 +38,6 @@ TEST_CASE("Is Prime Test Case")
 	REQUIRE(is_prime(4) == false);
 	REQUIRE(is_prime(43) == true);
 	REQUIRE(is_prime(44) == false);
-
 }
 
 /*
@@ -51,5 +50,10 @@ argument 50 return vector should have the following items:
 
 TEST_CASE("Vector of primes test case")
 {
+	std::vector<int> vector_test = { 2, 3, 5, 7 };
+	REQUIRE(vector_test == vector_of_primes(10));
+
+	vector_test = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
+	REQUIRE(vector_test == vector_of_primes(50));
 
 }

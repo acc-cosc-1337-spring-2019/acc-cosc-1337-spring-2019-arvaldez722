@@ -28,7 +28,9 @@ int main()
 				<< "Selection (1,2): ";
 			cin >> size;
 		}
-		tic_tac_toe = manager->get_game(size);
+
+		tic_tac_toe = manager->get_game(size + 2);
+
 		//Check to see if the first player wants to be X or O
 		while (first != "X" && first != "O") {
 			cout << "First player (X or O?): ";
