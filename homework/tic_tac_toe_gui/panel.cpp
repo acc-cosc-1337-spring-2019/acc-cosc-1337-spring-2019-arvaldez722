@@ -5,6 +5,8 @@ Class Constructor
 1. STUDENT MUST WRITE CODE FOR THIS
    Using make unique object, create a unique pointer to manager 
 
+
+
 2. STUDENT MUST WRITE CODE FOR THIS
    Call the manager get_games function and save games to a local const vector& reference
    Using auto& for loop, loop through each game and call the history list box Append
@@ -16,7 +18,7 @@ Panel::Panel(wxWindow* parent)
 	: wxPanel(parent, -1)
 {
 	//1. Create unique pointer of TicTacToeManager
-	
+	manager = std::unique_ptr<TicTacToeManager>
 
 	auto vbox = new wxBoxSizer(wxVERTICAL);
 	auto top_horizontal_box = get_top_box_sizer();
@@ -32,7 +34,11 @@ Panel::Panel(wxWindow* parent)
     Using auto& for loop, loop through each game and call the history list box Append
     function to add the string Game to it --> "Game"*/
 	
+	const std::vector<std::unique_ptr<TicTacToe>>& games = manager->get_game();
 
+	for (auto g : games) {
+		history_list_box->Append("Game");//when the constructor runs it'll load up files from previous games
+	}
 
 	vbox->Add(top_horizontal_box, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
 	vbox->Add(mid_horizontal_box, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 10);
@@ -70,6 +76,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	//1) Write code to get a reference to a vector of boards by calling the manager get_games function
 	//Example const std::vector<std::unique_ptr<SomeClass>>& my_class_vector = other_class->get_classes()
 	
+	const std::vector<std::unique_ptr >>& games = manager->get_game();
 
 	/*STUDENT MUST WRITE CODE FOR THIS
 	2) Write code to get a reference to one board using the history_list_box GetSelection function as 
@@ -79,10 +86,11 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	   Use the Example from #1 above as guidance.
 	*/
 	
+	const std::unique_ptr<TicTacToe >>& board = games[history_list_box->GetSelection()];
 
 	wxGridSizer* sizer;
 
-	if (9 == 9)
+	if (board->get_pegs().size() == 9)
 	{
 		sizer = tic_tac_toe_grid_3;
 		tic_tac_toe_grid_4->Show(false);
@@ -101,7 +109,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	{	//call board get_pegs[i-1]  DONE
 
 		//STUDENT ACTION REQUIRED: REMOVE COMMENTS TO RUN STATEMENT BELOW
-		//item->GetWindow()->SetLabel(board->get_pegs()[i - 1]);
+		item->GetWindow()->SetLabel(board->get_pegs()[i - 1]);
 		item->GetWindow()->Disable();
 		i++;
 	}
@@ -110,6 +118,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	5)Call the winner_text SetValue function and pass the board get_winner() return value
 	as its parameter argument*/
 	
+	winner_text->SetValue(board->get_winner());
 	
 	set_winner_labels();
 	this->Layout();
