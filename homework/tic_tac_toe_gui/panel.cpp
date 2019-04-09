@@ -157,7 +157,7 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 		pass 3,4, or if you have my solution the values GameType::three or GameType::four
 		as parameter arguments to the get_game function
 		*/
-		
+		board = manager->get_game(3);
 		
 		tic_tac_toe_grid_4->Show(false);
 		tic_tac_toe_grid_3->Show(true);
@@ -173,7 +173,7 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 		as parameter arguments to the get_game function
 		*/
 		
-		
+		board = manager->get_game(4);
 		
 		tic_tac_toe_grid_3->Show(false);
 		tic_tac_toe_grid_4->Show(true);
@@ -184,7 +184,15 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 	    to determine whether X or O goes first. 
 	   if radio button selection 0 call the board start game function with X or O
 	*/
-	
+	if (first_player_radio->GetSelection() == 0)
+	{
+		board->start_game("X");
+
+	}
+	else if (first_player_radio() == 1)
+	{
+		board->start_game("O");
+	}
 
 	auto btn = dynamic_cast<wxButton*>(event.GetEventObject());
 	btn->Disable();
@@ -221,6 +229,7 @@ void Panel::on_peg_button_click(wxCommandEvent & event)
 	Example: some_btn->SetLabel(my_class->some_function())
 	*/
 	
+	btn->SetLabel(board->get_player());
 
 	/*Call the board's mark_board function and pass the val value as its parmater argument
 	use the std::stoi to convert from string to int
@@ -254,18 +263,18 @@ void Panel::set_winner_labels()
 	STUDENT MUST WRITE CODE FOR THIS
 	1. Write code to call the manager get winner total and pass the x, o, and c variables as parameters
 	*/
-	
+	manager->get_winner_totals(x, o, c);
+
 
 	/*
 	STUDENT ACTION REQUIRED
 	Remove comments below to properly set labels
 	*/
 	
-	/*
 	x_winner_label->SetValue(std::to_string(x));
 	o_winner_label->SetValue(std::to_string(o));
 	c_winner_label->SetValue(std::to_string(c));
-	*/
+	
 
 	this->Layout();
 }
