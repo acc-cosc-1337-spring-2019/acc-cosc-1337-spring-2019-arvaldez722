@@ -12,7 +12,7 @@ public:
 	void save_game(std::unique_ptr<TicTacToe>& game);
 	std::unique_ptr<TicTacToe> get_game(int game_type);
 
-	const std::vector<std::unique_ptr<TicTacToe>>& TicTacToeManager::get_game();
+	const std::vector<std::unique_ptr<TicTacToe>>& TicTacToeManager::get_games();
 	void get_winner_totals(int& x, int& o, int& c);
 
 

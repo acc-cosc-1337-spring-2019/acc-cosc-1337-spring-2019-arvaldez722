@@ -18,7 +18,7 @@ Panel::Panel(wxWindow* parent)
 	: wxPanel(parent, -1)
 {
 	//1. Create unique pointer of TicTacToeManager
-	manager = std::unique_ptr<TicTacToeManager>
+	manager = std::make_unique<TicTacToeManager>();
 
 	auto vbox = new wxBoxSizer(wxVERTICAL);
 	auto top_horizontal_box = get_top_box_sizer();
@@ -34,9 +34,10 @@ Panel::Panel(wxWindow* parent)
     Using auto& for loop, loop through each game and call the history list box Append
     function to add the string Game to it --> "Game"*/
 	
-	const std::vector<std::unique_ptr<TicTacToe>>& games = manager->get_game();
+	const std::vector<std::unique_ptr<TicTacToe>>& games = manager->get_games();
 
-	for (auto g : games) {
+	for (auto &g : games)
+	{
 		history_list_box->Append("Game");//when the constructor runs it'll load up files from previous games
 	}
 
@@ -76,7 +77,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	//1) Write code to get a reference to a vector of boards by calling the manager get_games function
 	//Example const std::vector<std::unique_ptr<SomeClass>>& my_class_vector = other_class->get_classes()
 	
-	const std::vector<std::unique_ptr >>& games = manager->get_game();
+	const std::vector<std::unique_ptr<TicTacToe>>& games = manager->get_games();
 
 	/*STUDENT MUST WRITE CODE FOR THIS
 	2) Write code to get a reference to one board using the history_list_box GetSelection function as 
@@ -86,7 +87,7 @@ void Panel::on_list_box_click(wxCommandEvent& event)
 	   Use the Example from #1 above as guidance.
 	*/
 	
-	const std::unique_ptr<TicTacToe >>& board = games[history_list_box->GetSelection()];
+	const std::unique_ptr<TicTacToe>& board = games[history_list_box->GetSelection()];
 
 	wxGridSizer* sizer;
 
@@ -189,7 +190,7 @@ void Panel::on_start_button_click(wxCommandEvent & event)
 		board->start_game("X");
 
 	}
-	else if (first_player_radio() == 1)
+	else if (first_player_radio->GetSelection() == 1)
 	{
 		board->start_game("O");
 	}
