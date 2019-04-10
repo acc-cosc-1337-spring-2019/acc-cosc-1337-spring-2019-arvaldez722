@@ -1,5 +1,5 @@
 #include "panel.h"
-#include<string>
+#include <string>
 /*
 Class Constructor
 1. STUDENT MUST WRITE CODE FOR THIS
@@ -241,7 +241,7 @@ void Panel::on_peg_button_click(wxCommandEvent & event)
 
 	if (board->game_over())
 	{
-		wxMessageBox(wxT("Winner!"), wxT("TicTacToe"), wxICON_INFORMATION);
+		wxMessageBox(wxString(board->get_winner() + " is the Winner!"), wxT("TicTacToe"), wxICON_INFORMATION);
 		history_list_box->Append("game");
 		winner_text->SetLabel(board->get_winner());
 		start_button->Enable();
@@ -313,13 +313,13 @@ wxBoxSizer * Panel::get_top_box_sizer()
 	wxString first_player_choices[]{ wxT("X"), wxT("O") };
 
 	auto hbox0 = new wxBoxSizer(wxHORIZONTAL);
-	game_type_radio = new wxRadioBox(this, -1, wxT("Game Type"), wxDefaultPosition, wxDefaultSize,
+	game_type_radio = new wxRadioBox(this, wxID_ANY, wxT("Game Type"), wxDefaultPosition, wxDefaultSize,
 		WXSIZEOF(game_type_choices), game_type_choices, 1, wxRA_SPECIFY_COLS);
 
-	first_player_radio = new wxRadioBox(this, -1, wxT("First Player"), wxDefaultPosition,
+	first_player_radio = new wxRadioBox(this, wxID_ANY, wxT("First Player"), wxDefaultPosition,
 		wxDefaultSize, WXSIZEOF(first_player_choices), first_player_choices, 1, wxRA_SPECIFY_COLS);
 
-	history_list_box = new wxListBox(this, -1, wxPoint(-1, -1), wxSize(-1, -1));
+	history_list_box = new wxListBox(this, wxID_ANY, wxPoint(-1, -1), wxSize(-1, -1));
 	history_list_box->Bind(wxEVT_LISTBOX, &Panel::on_list_box_click, this);
 
 	auto hbox1 = new wxBoxSizer(wxVERTICAL);
@@ -365,7 +365,7 @@ wxBoxSizer * Panel::get_mid_box_sizer()
 	winner_text->Disable();
 	hbox1->Add(winner_text, 1);
 
-	start_button = new wxButton(this, -1, wxT("Start"));
+	start_button = new wxButton(this, wxID_ANY, wxT("Start"));
 	start_button->Bind(wxEVT_BUTTON, &Panel::on_start_button_click, this);
 	hbox1->Add(start_button);
 
@@ -383,7 +383,7 @@ wxGridSizer * Panel::get_grid_sizer(int size)
 
 	for (int i = 0; i < size*size; i++)
 	{
-		auto btn = new wxButton(this, -1, std::to_string(i + 1));
+		auto btn = new wxButton(this, wxID_ANY, std::to_string(i + 1));
 		btn->Bind(wxEVT_BUTTON, &Panel::on_peg_button_click, this);
 		gs->Add(btn, 0, wxEXPAND);
 	}
