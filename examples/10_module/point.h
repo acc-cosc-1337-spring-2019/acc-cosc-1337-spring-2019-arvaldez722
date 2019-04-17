@@ -3,7 +3,7 @@
 
 class Point
 {
-public:
+public:			//x,y coordinate ex (100,100)
 	Point(int a, int b) : x(a), y(b) {}
 	int x;
 	int y;

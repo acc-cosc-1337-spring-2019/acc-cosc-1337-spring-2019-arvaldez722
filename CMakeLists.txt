@@ -32,6 +32,8 @@ include_directories(homework/03_iteration)
 include_directories(homework/04_vectors)
 include_directories(homework/tic_tac_toe)
 
+include_directories(00April_Practice_Stuff)
+
 add_subdirectory(01-basics)
 add_subdirectory(01-basics_test)
 add_subdirectory(classwork)
@@ -39,6 +41,4 @@ add_subdirectory(examples)
 add_subdirectory(homework)
 
 
-add_subdirectory(00April_Practice_Stuff)
-
-
+#add_subdirectory(00April_Practice_Stuff)
