@@ -3,8 +3,8 @@ project(grahics_clock)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(wxWidgets_ROOT_DIR C:/Users/Public/cpp/wxWidgets-3.0.4)
-set(wxWidgets_LIB_DIR C:/Users/Public/cpp/wxWidgets-3.0.4/lib/vc_x64_lib)
+set(wxWidgets_ROOT_DIR C:/Users/Public/cpp/wxWidgets-3.1.2)
+set(wxWidgets_LIB_DIR C:/Users/Public/cpp/wxWidgets-3.1.2/lib/vc_x64_lib)
 set(wxWidgets_CONFIGURATION msw)
 
 find_package(wxWidgets REQUIRED net gl core base)
