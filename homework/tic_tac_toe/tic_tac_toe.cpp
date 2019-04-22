@@ -2,6 +2,11 @@
 #include<iostream>
 #include <cmath>
 
+TicTacToe::TicTacToe(std::vector<std::string> def_pegs)
+{
+	pegs = def_pegs;
+}
+
 void TicTacToe::start_game(std::string first_player)
 {
 	next_player = first_player;
@@ -135,4 +140,11 @@ std::istream & operator>>(std::istream & in, TicTacToe & t)
 const std::vector<std::string>& TicTacToe::get_pegs()
 {
 	return pegs;
+}
+
+void TicTacToe::determine_winner()
+{
+	//TODO: Actually implement this
+	//set the winner ...
+	winner = "U";
 }

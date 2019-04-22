@@ -8,14 +8,14 @@
 #include "tic_tac_toe.h"
 
 using std::string; using std::vector; using std::unique_ptr;
-using std::fstream;
+using std::fstream; using std::ofstream; using std::ifstream; using std::getline;
 
 class TicTacToeData 
 {
 public:
 	void save_game(const vector<string>& pegs);
 	vector<unique_ptr<TicTacToe>> get_games();
-	
+
 private:
 	const string file_name{ "tic_tac_toe.dat" };
 };
