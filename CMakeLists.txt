@@ -25,14 +25,21 @@ include_directories(examples/03_module/06_value_and_reference_params)
 include_directories(examples/03_module/07_vectors_intro)
 include_directories(examples/04_module/01_bank)
 include_directories(examples/07_module)
-include_directories(examples/08_module)
+#include_directories(examples/08_module)
+include_directories(examples/11_module/01_ref_pointers)
+include_directories(examples/11_module/02_dynamic_memory)
+include_directories(examples/11_module/03_memory_leak)
+include_directories(examples/11_module/04_dangling_pointer)
+include_directories(examples/11_module/05_raii)
+include_directories(examples/11_module/06_destructors)
+include_directories(examples/11_module/07_class_copy)
+include_directories(examples/11_module/08_rule_of_3)
+include_directories(examples/11_module/08_rule_of_5)
 
 include_directories(homework/02_decisions)
 include_directories(homework/03_iteration)
 include_directories(homework/04_vectors)
 include_directories(homework/tic_tac_toe)
-
-include_directories(00April_Practice_Stuff)
 
 add_subdirectory(01-basics)
 add_subdirectory(01-basics_test)
@@ -41,4 +48,5 @@ add_subdirectory(examples)
 add_subdirectory(homework)
 
 
-#add_subdirectory(00April_Practice_Stuff)
+
+
