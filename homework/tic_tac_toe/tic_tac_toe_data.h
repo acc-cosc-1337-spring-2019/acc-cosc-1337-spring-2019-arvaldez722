@@ -1,5 +1,6 @@
 #ifndef TIC_TAC_TOE_DATA_H
 #define TIC_TAC_TOE_DATA_H
+
 #include<memory>
 #include<fstream>
 #include<iostream>

@@ -1,5 +1,5 @@
 #include "tic_tac_toe.h"
-#include<iostream>
+#include <iostream>
 #include <cmath>
 
 TicTacToe::TicTacToe(std::vector<std::string> def_pegs)
@@ -144,7 +144,30 @@ const std::vector<std::string>& TicTacToe::get_pegs()
 
 void TicTacToe::determine_winner()
 {
-	//TODO: Actually implement this
-	//set the winner ...
-	winner = "U";
+	size_t x = 0;
+	size_t o = 0;
+
+	for (int i = 0; i < pegs.size(); ++i)
+	{
+		if (pegs[i] == "X")
+		{
+			++x;
+		}
+		if (pegs[i] == "O")
+		{
+			++o;
+		}
+	}
+
+	if (check_board_full()) {
+		winner = "C";
+	}
+	else {
+		if (x > o) {
+			winner = "X";
+		}
+		else {
+			winner = "O";
+		}
+	}
 }

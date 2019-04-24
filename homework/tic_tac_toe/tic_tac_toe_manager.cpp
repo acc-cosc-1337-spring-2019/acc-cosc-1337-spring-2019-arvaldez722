@@ -4,8 +4,14 @@
 
 //Write class function implementations here
 
+TicTacToeManager::TicTacToeManager() {
+	games = data.get_games();
+	set_scores();
+}
+
 void TicTacToeManager::save_game(std::unique_ptr<TicTacToe>& game)
 {
+	data.save_game(game->get_pegs());
 	update_winner_count(game->get_winner());
 	games.push_back(std::move(game));
 }
@@ -61,4 +67,11 @@ void TicTacToeManager::get_winner_totals(int& x, int& o, int& c)
 	x = x_win;
 	o = o_win;
 	c = ties;
+}
+
+void TicTacToeManager::set_scores()
+{
+	for (int i = 0; i < games.size(); ++i) {
+		update_winner_count(games[i]->get_winner());
+	}
 }

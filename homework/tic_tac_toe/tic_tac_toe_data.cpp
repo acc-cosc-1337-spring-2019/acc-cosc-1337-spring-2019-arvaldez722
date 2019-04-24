@@ -19,7 +19,7 @@ void TicTacToeData::save_game(const vector<string>& pegs)
 	if (outTTT.is_open())
 	{
 		//figure out 3x3 or 4x4
-		int length = std::sqrt(pegs.size());
+		int length = (int)std::sqrt(pegs.size());
 
 		//for each row
 		for (std::size_t i = 0; i < length; ++i)
@@ -66,16 +66,17 @@ Create unique ptr of TicTacToe boards
 */
 vector<unique_ptr<TicTacToe>> TicTacToeData::get_games()
 {
+	
 	//Create unique ptr of TicTacToe boards
 	vector<unique_ptr<TicTacToe>> boards;
-
+	
 	string line;
 
 	//Open File
 	ifstream inTTT;
 
 	inTTT.open(file_name);
-		
+	
 	if (inTTT.is_open())
 	{
 		//while file open
@@ -84,17 +85,17 @@ vector<unique_ptr<TicTacToe>> TicTacToeData::get_games()
 		{
 			//Create vector of string
 			vector<string> pegs;
-				
+			
 			//for each ch in line
 			for (int i = 0; i < line.size(); ++i)
 			{
 				//Create a string with each ch use std::string(1, ch) to create the string
-				string ch = line.substr(i,1);
+				string ch = line.substr(i, 1);
 
 				//Add the string to vector of string
 				pegs.push_back(ch);
 			}
-
+			
 			//Create unique ptr of TicTacToe board
 			unique_ptr<TicTacToe> board;
 
@@ -108,18 +109,18 @@ vector<unique_ptr<TicTacToe>> TicTacToeData::get_games()
 				//create board of TicTacToe4 using make_unique
 				board = std::make_unique<TicTacToe4>(pegs);
 			}
-
+			
 			//add the board to the boards vector
-			boards.push_back(board);
-
+			boards.push_back(std::move(board));
 		}
-		//close the file
-		inTTT.close();
 	}
 	else 
 	{
 		//EEEEK There was some problem here!!!!
 	}
+
+	//close the file
+	inTTT.close();
 
 	//return the  vector  of TicTacToe
 	return boards;

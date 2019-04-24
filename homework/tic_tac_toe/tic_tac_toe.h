@@ -1,9 +1,9 @@
 #ifndef TIC_TAC_TOE
 #define TIC_TAC_TOE
 
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <string>
+#include <vector>
 
 class TicTacToe
 {
