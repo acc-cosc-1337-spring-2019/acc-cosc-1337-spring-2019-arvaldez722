@@ -1,1 +1,3 @@
 //
+
+void dangaling_pointer();

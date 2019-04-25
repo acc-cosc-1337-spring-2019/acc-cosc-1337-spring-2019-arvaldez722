@@ -2,6 +2,8 @@
 #include <iostream>
 int main() 
 {
+
+	/*
 	int number = 10;
 
 	//a pointer can store the address of a variable
@@ -20,5 +22,11 @@ int main()
 	std::cout << "Address of numberPtr: " << &numberPtr;
 	std::cout << " value stored at address is: " << numberPtr << std::endl;
 	std::cout << "Dereference numberPtr: " << *numberPtr << std::endl;
+	*/
+
+	int* hold_return_value;
+	int num = 5
+
+	*hold_return_value = return_pointer(num);
 	return 0;
 }
