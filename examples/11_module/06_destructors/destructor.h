@@ -4,8 +4,8 @@ class Destructor
 {
 public:
 	Destructor(int n) : num(n) { ptr_num = new int(n); }
-	Destructor(const Destructor& d);
-	Destructor& operator= (Destructor& d)// copy assignmetn-> Rule of 3
+	Destructor(const Destructor& d);// copy contructor -> bc rule of 3
+	Destructor& operator= (Destructor& d);// copy assignmetn-> Rule of 3
 
 	~Destructor(); // rule of 3
 	void set_value(int n);
