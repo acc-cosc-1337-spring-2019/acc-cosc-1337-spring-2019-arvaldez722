@@ -1,0 +1,5 @@
+add_subdirectory(01_arrays_mem)
+add_subdirectory(02_arrays_access)
+add_subdirectory(03_arrays_for_range)
+add_subdirectory(04_arrays_pointers)
+add_subdirectory(05_arrays_functions)
