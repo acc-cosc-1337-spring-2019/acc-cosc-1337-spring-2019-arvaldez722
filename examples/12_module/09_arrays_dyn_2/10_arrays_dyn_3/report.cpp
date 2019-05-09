@@ -4,7 +4,10 @@
 Report::Report()
 {
 	//read file from database
-	accounts = new BankAccount[5];
+	for (int i = 0; i < 5; ++i) {
+		accounts[i] = new BankAccount(i * 100);
+
+	}
 	//iterate to update balance
 	accounts[0].get_balance();
 
@@ -19,7 +22,12 @@ void Report::display()
 
 Report::~Report
 {
-	std::cout << "Clear Array" << std::endl;
+	for (int i = 0; i < 5; ++1) {
+		std::cout << "Clear element" << std::endl;
+		delete accounts[i];
+		accounts[i] = nullptr;
+}
+
 
 
 }

@@ -1,4 +1,4 @@
-//
+
 #include "examples/12_module/08_arrays_dyn_1/bank_account.h"
 
 #include "bank_account.cpp"
@@ -12,6 +12,7 @@ public:
 	~Report();
 	void display();
 private:
-	BankAccount* accounts;
+	BankAccount* accounts[5];
 };
 #endif // !REPORT_H
+//
