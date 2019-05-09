@@ -1,0 +1,1 @@
+add_executable(07_arrays_dyn_ch_exe "main.cpp")

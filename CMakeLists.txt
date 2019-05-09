@@ -35,6 +35,7 @@ include_directories(examples/11_module/06_destructors)
 include_directories(examples/11_module/07_class_copy)
 include_directories(examples/11_module/08_rule_of_3)
 include_directories(examples/11_module/08_rule_of_5)
+include_directories(.)
 
 include_directories(homework/02_decisions)
 include_directories(homework/03_iteration)
